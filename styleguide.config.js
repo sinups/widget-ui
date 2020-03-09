@@ -53,7 +53,7 @@ module.exports = {
   },
   webpackConfig,
   getExampleFilename(componentPath) {
-    return componentPath.replace(/\.js?$/, '.md')
+    return componentPath.replace(/[\w\d]+\.js$/i, 'README.md');
   },
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js')
