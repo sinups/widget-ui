@@ -1,8 +1,8 @@
 {
-  "name": "widget-ui",
+  "name": "wgt-ui",
   "version": "0.0.1",
   "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules and React Styleguidist",
-  "author": "AK",
+  "author": "sinups",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -22,12 +22,10 @@
     "styleguide:build": "NODE_ENV=production BABEL_ENV=production styleguidist build",
     "build": "NODE_ENV=production BABEL_ENV=production rollup -c",
     "build:watch": "rollup -c -w",
-    "test": "jest",
-    "test:coverage": "jest --coverage --forceExit --colors",
     "lint": "esw --ext .jsx --ext .js --color",
     "lint:fix": "yarn lint --fix",
     "prepare": "yarn build",
-    "prerelease": "yarn lint:fix && yarn test:coverage && yarn build",
+    "prerelease": "yarn lint:fix && yarn && yarn build",
     "release": "npm version patch && npm publish",
     "predeploy": "yarn styleguide:build",
     "deploy": "gh-pages -d styleguide"
@@ -75,7 +73,6 @@
     "react-app-polyfill": "^1.0.5",
     "react-dom": "^16.12.0",
     "react-styleguidist": "^10.3.2",
-    "react-test-renderer": "^16.12.0",
     "rollup": "^1.27.11",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",

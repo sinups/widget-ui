@@ -9,13 +9,13 @@ UI-кит для внутренних продуктов Justiva.
 + Ставь зависимость из npm
 
 ```shell
-npm i widget-ui
+npm i wgt-ui
 ```
 
 + Используй компоненты
 
 ```ts
-import { Button } from 'widget-ui'
+import { Button } from 'wgt-ui'
 
 <Button className="MyButton">
   Click me
