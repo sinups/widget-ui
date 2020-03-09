@@ -1,0 +1,53 @@
+/* disable rule due WIP colors */
+/* stylelint-disable custom-property-pattern */
+
+/* Color palette */
+:root {
+  --violet-blue: #3e89fa;
+  --vibrant-purple: #9b00c4;
+  --aqua: #2bf1d6;
+  --cerulean: #006dc2;
+  --red-orange: #ff3b00;
+  --dark-periwinkle: #5856d6;
+  --violet-blue-two: #4800cc;
+  --purple-blue: #6b27e6;
+  --lightish-green: #4cd964;
+  --weird-green: #59ee72;
+  --pinkish-grey: #ccc;
+  --greyish: #b8b8b8;
+  --marigold: #ffc800;
+  --red-orange-two: #ff4000;
+  --orange-yellow: #ffae00;
+  --leafy-green: #3eca42;
+  --purple: #791499;
+  --green-blue: #00b28a;
+  --cerulean-two: #067fc5;
+  --browny-orange: #d56402;
+  --indigo: #370690;
+  --purple-two: #7e209c;
+  --kiwi: #80f12b;
+  --green: #29a613;
+  --sky-blue: #57a4ff;
+  --orangey-red: #ff3939;
+  --pinkish-grey-two: #cbcbcb;
+  --neon-red: #ff1935;
+  --white: #f5f5f5;
+  --medium-green: #3bbf51;
+  --greyish-two: #b7b6b6;
+  --violet-blue-three: #7103cd;
+  --ultramarine: #2c00b4;
+  --black-65: rgba(51, 51, 51, 0.65);
+  --lipstick: #e22d44;
+  --watermelon: #ec4c51;
+  --black: #333;
+  --very-light-purple: #f9e8fd;
+  --pale-blue: #e2eefe;
+  --lightish-green-two: #50e063;
+  --light-orange: #ffa844;
+  --white-two: #dcdcdc;
+  --cool-grey: #a9afb7;
+  --french-toast: #ffda54;
+  --lauries-lips: #cb2d3e;
+  --cool-grey-two: #b0b4ba;
+  --dark-grey: #676c75;
+}

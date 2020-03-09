@@ -26,6 +26,7 @@ export default {
   plugins: [
     postcss({
       plugins: [],
+      modules: true,
       minimize: true,
       sourceMap: 'inline',
     }),

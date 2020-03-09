@@ -1,56 +1,54 @@
+const fs = require('fs');
 const path = require('path')
 const pkg = require('./package.json')
 const webpackConfig = require('./config/webpack.js')
+const { theme, styles } = require('./docs/styleguide/styles');
+const schema = require('./components.json');
+function resolve(...paths) {
+  return fs.realpathSync(path.join(__dirname, ...paths));
+}
+
+function getSections() {
+  return schema.map(({ name, content, components }) => {
+    return {
+      name,
+      content: content ? resolve('docs', content + '.md') : null,
+      components() {
+        return components.map((componentName) => {
+          return resolve(
+            'src/lib/components',
+            componentName,
+            componentName + '.js',
+          );
+        });
+      },
+    };
+  });
+}
 
 module.exports = {
-  title: `${pkg.name} v${pkg.version}`,
+  title: `Justiva Widget v${pkg.version}`,
+  // editorConfig: {
+  //   theme: 'dracula',
+  // },
+
+  sections: getSections(),
   components: 'src/lib/components/**/[A-Z]*.js',
   moduleAliases: {
     [pkg.name]: path.resolve(__dirname, 'src/lib'),
   },
-  // ribbon: {
-  //   url: 'https://justiva.ru',
-  //   text: 'Created by justiva',
+
+  require: [
+    resolve('docs/styleguide/global.css'),
+    resolve('docs/styleguide/styles.css'),
+  ],
+
+  // styleguideComponents: {
+  //   Wrapper: resolve('docs/styleguide/Wrapper/Wrapper.js'),
   // },
-  showSidebar: true,
-  usageMode: 'expand',
-  skipComponentsWithoutExample: true,
-  theme: {
-    color: {
-      link: '#065fd4',
-      linkHover: '#00adef',
-    },
-    font: ['Helvetica', 'sans-serif'],
-  },
-  styles: {
-    Ribbon: {
-      root: {
-        backgroundImage: 'url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png")',
-        backgroundSize: '50px 50px',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right top',
-      },
-      link: {
-        backgroundColor: '#065fd4',
-      },
-    },
-    Heading: {
-      heading2: {
-        fontSize: 26,
-      },
-    },
-    ReactComponent: {
-      root: {
-        marginBottom: 20,
-      },
-      header: {
-        marginBottom: 0,
-      },
-      tabs: {
-        marginBottom: 0,
-      },
-    },
-  },
+
+  theme,
+  styles,
   webpackConfig,
   getExampleFilename(componentPath) {
     return componentPath.replace(/[\w\d]+\.js$/i, 'README.md');
