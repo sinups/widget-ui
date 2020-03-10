@@ -33,7 +33,8 @@ module.exports = {
   usageMode: 'expand',
   skipComponentsWithoutExample: true,
   styleguideComponents: {
-    TableRenderer: path.resolve(__dirname, './docs/styleguide/Table'),
+    TableRenderer: path.resolve(__dirname, './docs/styleguide/Customizer/Table'),
+    Preview: path.resolve(__dirname, './docs/styleguide/Customizer/Preview'),
     // PathlineRenderer: path.resolve(__dirname, './docs/styleguide/Pathline'),
   },
   theme,
