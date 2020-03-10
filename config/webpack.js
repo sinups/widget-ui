@@ -9,9 +9,23 @@ module.exports = {
           'babel-loader',
         ],
       },
+      // {
+      //   test: /\.(s?)css$/,
+      //   use: ['style-loader', 'css-loader', 'sass-loader'],
+      // },
       {
-        test: /\.(s?)css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.scss$/,
+        use: [
+          require.resolve('style-loader'),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          },
+          require.resolve('sass-loader')
+        ]
       },
       {
         test: /\.(png|jpg|jpeg|svg|webp|gif)$/,
