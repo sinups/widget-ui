@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 import Styled from 'rsg-components/Styled';
 import DefaultPreview from 'react-styleguidist/lib/client/rsg-components/Preview/Preview';
 
-const THEMES = ['light', 'dark'];
+const THEMES = ['light', 'transparent',];
 const BACKGROUND_COLOR = {
   light: '#fff',
-  dark: '#1d2f3a'
+  transparent: 'linear-gradient(45deg, #efefef 25%, transparent 25%, transparent 75%, #efefef 75%, #efefef),linear-gradient(45deg, #efefef 25%, transparent 25%, transparent 75%, #efefef 75%, #efefef)'
 };
 const BORDER_COLOR = {
   light: '#ddd',
-  dark: '#000'
+  transparent: 'transparent'
 };
 const COLOR = {
-  light: 'black',
-  dark: 'white'
+  light: '#fff',
+  transparent:'#fff'
 };
 
 const styles = ({ fontFamily }) => ({
@@ -22,7 +22,10 @@ const styles = ({ fontFamily }) => ({
     borderWidth: 1,
     borderStyle: 'solid',
     padding: 20,
-    borderRadius:'3px'
+    borderRadius:'3px',
+    backgroundColor: '#fff',
+    backgroundPosition: '0 0, 10px 10px',
+    backgroundSize: '20px 20px'
   },
   themeButtonWrapper: {
     position: 'relative'
@@ -31,7 +34,8 @@ const styles = ({ fontFamily }) => ({
     position: 'absolute',
     top: '5px',
     right: '5px',
-    background: 'none',
+    background: '#3e89fa',
+    borderRadius:'3px',
     padding: '5px 7px',
     fontSize: 13,
     fontFamily: fontFamily.base,
@@ -40,7 +44,14 @@ const styles = ({ fontFamily }) => ({
     cursor: 'pointer',
     ':focus': {
       outline: 'none !important'
-    }
+    },
+    ':hover': {
+      backgroundColor: 'red'
+    },
+
+    ':focus': {
+      backgroundColor: 'green'
+    },
   }
 });
 
@@ -75,7 +86,10 @@ export class Preview extends React.Component {
         </div>
         <div
           className={classes.previewBg}
-          style={{
+          style={theme === 'transparent' ? {
+            backgroundImage: BACKGROUND_COLOR[theme],
+            borderColor: BORDER_COLOR[theme]
+          } : {
             background: BACKGROUND_COLOR[theme],
             borderColor: BORDER_COLOR[theme]
           }}>
