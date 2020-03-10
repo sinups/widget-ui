@@ -25,12 +25,15 @@ function getSections() {
 module.exports = {
   title: `Justiva Widget v${pkg.version}`,
   components: 'src/components/**/[A-Z]*.js',
+  // editorConfig: {
+  //   theme: 'dracula',
+  // },
   sections: getSections(),
-  moduleAliases: {
-    [pkg.name]: path.resolve(__dirname, 'src/lib'),
-  },
+  // moduleAliases: {
+  //   [pkg.name]: path.resolve(__dirname, 'src'),
+  // },
   showSidebar: true,
-  usageMode: 'expand',
+  usageMode: 'collapse',
   skipComponentsWithoutExample: true,
   styleguideComponents: {
     TableRenderer: path.resolve(__dirname, './docs/styleguide/Customizer/Table'),

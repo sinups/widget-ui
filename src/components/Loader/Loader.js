@@ -71,3 +71,4 @@ Loader.propTypes = {
    */
   size: PropTypes.oneOf(['small', 'medium', 'large'])
 };
+export default Loader

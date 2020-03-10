@@ -74,18 +74,11 @@ Button expanded to the full width to fill the parent container (max-width: 320px
 </Button>
 ```
 
-### Button with icon
-
-```js
-<Button icon={<AlertCircleIcon />} primary>
-  Primary Button
-</Button>
-```
 
 
 ### Loading
 
-```js
+```jsx
   initialState = { loading: true };
 
   toggleLoading = () => {
@@ -107,11 +100,3 @@ Button expanded to the full width to fill the parent container (max-width: 320px
   </div>
 ```
 
-
-### Best practices
-
-- Prioritize most important action; don’t use more than 1 primary button per screen.
-- Position buttons in consistent locations in the UI.
-- Use short yet descriptive labels ({verb} + {noun}).
-- Use strong verbs to encourage action.
-- Avoid unnecessary words and articles such as the, an, or a.
