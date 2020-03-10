@@ -42,16 +42,8 @@ const styles = ({ fontFamily }) => ({
     border: 'none',
     boxShadow: 'none',
     cursor: 'pointer',
-    ':focus': {
-      outline: 'none !important'
-    },
-    ':hover': {
-      backgroundColor: 'red'
-    },
-
-    ':focus': {
-      backgroundColor: 'green'
-    },
+    outline: 'none !important'
+    
   }
 });
 
