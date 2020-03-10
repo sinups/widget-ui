@@ -10,7 +10,7 @@ import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 export default {
-  input: 'src/lib/index.js',
+  input: 'src/index.js',
   output: [
     {
       file: pkg.main,
@@ -24,11 +24,13 @@ export default {
     },
   ],
   plugins: [
+    // postcss({
+    //   plugins: [],
+    //   minimize: true,
+    //   sourceMap: 'inline',
+    // }),
     postcss({
-      plugins: [],
       modules: true,
-      minimize: true,
-      sourceMap: 'inline',
     }),
     external({
       includeDependencies: true,

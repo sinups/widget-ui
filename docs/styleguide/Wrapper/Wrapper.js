@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-// import Switcher from '../../../src/lib/components/Switcher';
+import Checkbox from '../../../src/components/Checkbox';
 import styles from './Wrapper.scss';
 import createSequence from '../createSequence';
 
@@ -29,24 +29,25 @@ class Wrapper extends PureComponent {
   renderBackgroundToggle() {
     const { isTransparent } = this.state;
 
-    // return (
-    //   <Switcher
-    //   id={this.id}
-    //   name="toggle"
-    //   className={styles.toggle}
-    //   value={isTransparent}
-    //   onChange={this.handleBackgroundToggle}
-    //   label="Прозрачность"
-    //   />
-    
-    // );
+    return (
+      // <Switcher
+      // id={this.id}
+      // name="toggle"
+      // className={styles.toggle}
+      // value={isTransparent}
+      // onChange={this.handleBackgroundToggle}
+      // label="Прозрачность"
+      // />
+
+      <Checkbox  value={isTransparent} name="toggle" id={this.id} className={styles.toggle} onChange={this.handleBackgroundToggle}>Прозрачность</Checkbox>
+    );
   }
 
   render() {
     const wrapperClassName = classNames(styles.wrapper, this.state.isTransparent ? styles.transparent : styles.white);
 
     return (
-     
+
         <Fragment>
           <div className={styles.container}>
             <header className={styles.header}>
@@ -59,7 +60,7 @@ class Wrapper extends PureComponent {
             </div>
           </div>
         </Fragment>
-     
+
     );
   }
 }

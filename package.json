@@ -21,6 +21,7 @@
     "start": "cross-env NODE_ENV=development cross-env BABEL_ENV=development styleguidist server --open",
     "styleguide:build": "cross-env NODE_ENV=production cross-env BABEL_ENV=production styleguidist build",
     "build": "cross-env NODE_ENV=production cross-env BABEL_ENV=production rollup -c",
+    "create": "node config/create-component.js",
     "build:watch": "rollup -c -w",
     "lint": "esw --ext .jsx --ext .js --color",
     "lint:fix": "yarn lint --fix",
@@ -74,7 +75,7 @@
     "react": "^16.12.0",
     "react-app-polyfill": "^1.0.5",
     "react-dom": "^16.12.0",
-    "react-styleguidist": "^10.3.2",
+    "react-styleguidist": "^11.0.0",
     "rollup": "^1.27.11",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -84,7 +85,11 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.1",
     "typescript": "^3.7.3",
-    "webpack": "^4.41.2"
+    "webpack": "^4.41.2",
+    "inquirer": "6.5.0",
+    "lodash": "4.17.13",
+    "chalk": "2.4.2",
+    "ejs": "2.6.2"
   },
   "files": [
     "dist"
