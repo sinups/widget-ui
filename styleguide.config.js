@@ -34,6 +34,7 @@ module.exports = {
   skipComponentsWithoutExample: true,
   styleguideComponents: {
     TableRenderer: path.resolve(__dirname, './docs/styleguide/Table'),
+    PathlineRenderer: path.resolve(__dirname, './docs/styleguide/Pathline'),
   },
   theme,
   styles,
