@@ -14,11 +14,11 @@ const Checkbox = ({
   className,
   ...props
 }) => {
-  const classes = classNames(styles.container, props.className);
+  const classes = classNames(styles.container, props.className)
 
   return (
     <Label className={classes}>
-      <input type='checkbox' {...props} className={'checkbox'}/>
+      <input type="checkbox" {...props} className="checkbox" />
       {' '}
       {children}
     </Label>
@@ -29,10 +29,12 @@ Checkbox.displayName = 'Checkbox'
 Checkbox.propTypes = {
   as: PropTypes.node,
   className: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 Checkbox.defaultProps = {
-  as: 'label'
+  as: 'label',
+  className: '',
+  children: '',
 }
 export default Checkbox

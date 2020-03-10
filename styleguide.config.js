@@ -6,7 +6,7 @@ const { theme, styles } = require('./docs/styleguide/styles')
 const schema = require('./components.json')
 
 function resolve(...paths) {
-  return fs.realpathSync(path.join(__dirname, ...paths));
+  return fs.realpathSync(path.join(__dirname, ...paths))
 }
 
 function getSections() {
@@ -40,7 +40,7 @@ module.exports = {
   styles,
   webpackConfig,
   getExampleFilename(componentPath) {
-    return componentPath.replace(/[\w\d]+\.js$/i, 'README.md');
+    return componentPath.replace(/[\w\d]+\.js$/i, 'README.md')
   },
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js')
