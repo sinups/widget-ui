@@ -1,12 +1,12 @@
-import * as React from 'react';
-import * as PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-import styles from './style.scss';
-import getMergedClassNames from '../../utils/getMergedClassNames';
-import Loader from '../Loader';
+import * as React from 'react'
+import * as PropTypes from 'prop-types'
+import classNames from 'classnames/bind'
+import styles from './style.scss'
+import getMergedClassNames from '../../utils/getMergedClassNames'
+import Loader from '../Loader'
 
-const cx = classNames.bind(styles);
-const acceptedSizes = ['large', 'compact'];
+const cx = classNames.bind(styles)
+const acceptedSizes = ['large', 'compact']
 
 const Button = React.forwardRef((props, ref) => {
   const {
@@ -26,21 +26,21 @@ const Button = React.forwardRef((props, ref) => {
     className,
     type: htmlType,
     ...buttonProps
-  } = props;
+  } = props
 
-  const isDisabled = disabled || loading;
-  const type = submit ? 'submit' : htmlType || 'button';
-  let buttonType = null;
+  const isDisabled = disabled || loading
+  const type = submit ? 'submit' : htmlType || 'button'
+  let buttonType = null
 
   if (primary) {
-    buttonType = 'primary';
+    buttonType = 'primary'
   } else if (destructive) {
-    buttonType = 'destructive';
+    buttonType = 'destructive'
   } else if (secondary) {
-    buttonType = 'secondary';
+    buttonType = 'secondary'
   }
 
-  const baseClass = 'btn';
+  const baseClass = 'btn'
   const mergedClassNames = getMergedClassNames(
     cx({
       [baseClass]: true,
@@ -50,10 +50,10 @@ const Button = React.forwardRef((props, ref) => {
       [`${baseClass}--primary`]: buttonType === 'primary',
       [`${baseClass}--destructive`]: buttonType === 'destructive',
       [`${baseClass}--secondary`]: buttonType === 'secondary',
-      [`${baseClass}--${size}`]: acceptedSizes.some(s => s === size)
+      [`${baseClass}--${size}`]: acceptedSizes.some(s => s === size),
     }),
-    className
-  );
+    className,
+  )
 
   return (
     <button
@@ -74,8 +74,8 @@ const Button = React.forwardRef((props, ref) => {
       {icon && <i className={styles[`${baseClass}__icon`]}>{icon}</i>}
       {children}
     </button>
-  );
-});
+  )
+})
 
 Button.propTypes = {
   accessibilityLabel: PropTypes.string,
@@ -111,7 +111,7 @@ Button.propTypes = {
    */
   size: PropTypes.oneOf(['compact', 'large']),
   submit: PropTypes.bool,
-  type: PropTypes.string
-};
+  type: PropTypes.string,
+}
 
 export default Button

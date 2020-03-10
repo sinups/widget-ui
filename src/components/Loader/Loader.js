@@ -1,8 +1,8 @@
-import * as React from 'react';
-import * as PropTypes from 'prop-types';
-import { LoaderWrapper } from './LoaderWrapper';
-import { LoaderSpinner } from './LoaderSpinner';
-import { LoaderLabel } from './LoaderLabel';
+import * as React from 'react'
+import * as PropTypes from 'prop-types'
+import { LoaderWrapper } from './LoaderWrapper'
+import { LoaderSpinner } from './LoaderSpinner'
+import { LoaderLabel } from './LoaderLabel'
 
 export const Loader = props => {
   const {
@@ -16,7 +16,7 @@ export const Loader = props => {
     secondaryColor,
     size,
     ...restProps
-  } = props;
+  } = props
 
   return (
     <LoaderWrapper {...restProps} isLoading={isLoading} className={className}>
@@ -29,8 +29,8 @@ export const Loader = props => {
       />
       {label && <LoaderLabel className={labelClassName}>{label}</LoaderLabel>}
     </LoaderWrapper>
-  );
-};
+  )
+}
 
 Loader.propTypes = {
   /**
@@ -69,6 +69,6 @@ Loader.propTypes = {
    * `Size` prop defines width and height of the wrapper and spinner thickness if it is not provided.
    * To define your custom size use css and `spinnerWrapperClassName` property (however, we recommend using defined size).
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
-};
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+}
 export default Loader
