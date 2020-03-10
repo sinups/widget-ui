@@ -25,7 +25,8 @@ const styles = ({ fontFamily }) => ({
     borderRadius:'3px',
     backgroundColor: '#fff',
     backgroundPosition: '0 0, 10px 10px',
-    backgroundSize: '20px 20px'
+    backgroundSize: '20px 20px',
+    fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif'
   },
   themeButtonWrapper: {
     position: 'relative'
@@ -42,7 +43,9 @@ const styles = ({ fontFamily }) => ({
     border: 'none',
     boxShadow: 'none',
     cursor: 'pointer',
-    outline: 'none !important'
+    outline: 'none !important',
+    zIndex: '99',
+    boxShadow: '1px 4px 10px 0px rgba(0, 0, 0, 0.20)'
     
   }
 });

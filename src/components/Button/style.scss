@@ -7,6 +7,7 @@
   color: $primary-color;
   border-color: $primary-color;
   font-size: 15px;
+  font-family: $font;
   min-width: 36px;
   min-height: 36px;
   transition-property: opacity, border, color, background-color, box-shadow;
@@ -17,7 +18,6 @@
   text-align: center;
   cursor: pointer;
   border-radius: 4px;
-  font-weight: 600;
   display: inline-flex;
   line-height: 1.5;
   position: relative;
