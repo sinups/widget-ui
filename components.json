@@ -2,7 +2,9 @@
   {
     "name": "Элементы виджета",
     "components": [
-      "Button"
+      "Button",
+      "Badge",
+      "Loader"
     ]
   },
   {
