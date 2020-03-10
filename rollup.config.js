@@ -24,13 +24,11 @@ export default {
     },
   ],
   plugins: [
-    // postcss({
-    //   plugins: [],
-    //   minimize: true,
-    //   sourceMap: 'inline',
-    // }),
     postcss({
+      plugins: [],
+      minimize: true,
       modules: true,
+      sourceMap: 'inline',
     }),
     external({
       includeDependencies: true,

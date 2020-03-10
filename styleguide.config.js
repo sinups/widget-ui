@@ -22,23 +22,19 @@ function getSections() {
     },
   }))
 }
-
 module.exports = {
   title: `Justiva Widget v${pkg.version}`,
-  sections: getSections(),
   components: 'src/components/**/[A-Z]*.js',
+  sections: getSections(),
   moduleAliases: {
     [pkg.name]: path.resolve(__dirname, 'src/lib'),
   },
-
-  require: [
-    resolve('docs/styleguide/styles.css'),
-  ],
-
+  showSidebar: true,
+  usageMode: 'expand',
+  skipComponentsWithoutExample: true,
   styleguideComponents: {
-    Wrapper: resolve('docs/styleguide/Wrapper/Wrapper.js'),
+    TableRenderer: path.resolve(__dirname, './docs/styleguide/Table'),
   },
-
   theme,
   styles,
   webpackConfig,
@@ -50,4 +46,5 @@ module.exports = {
 
     return `import { ${name} } from '${pkg.name}';`
   },
+
 }

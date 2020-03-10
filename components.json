@@ -2,8 +2,14 @@
   {
     "name": "Элементы виджета",
     "components": [
-      "Button",
+      "Button"
+    ]
+  },
+  {
+    "name": "Компоненты",
+    "components": [
       "Checkbox"
     ]
   }
+
 ]

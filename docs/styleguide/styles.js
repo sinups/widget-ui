@@ -3,7 +3,11 @@ const color = {
   danger: '#e22d44',
   info: '#5856d6',
 };
-
+const rhythm = (value = 1, unit = 'rem', basis = 1.5) => (
+  Array.isArray(value)
+    ? value.map(v => `${basis * v}${unit}`).join(' ')
+    : `${basis * value}${unit}`
+)
 module.exports = {
   theme: {
     maxWidth: '100%',
@@ -87,6 +91,29 @@ module.exports = {
         color: ['#fff', '!important'],
       },
     },
+    Heading: {
+      heading1: {
+        display: 'block',
+        position: 'relative',
+        paddingBottom: rhythm(0.75),
+        marginBottom: rhythm(0.75),
+        fontWeight: 700,
+        '&:before': {
+          content: '""',
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: rhythm(3),
+          height: '4px',
+          backgroundColor: color.primary,
+          borderRadius: '4px'
+        },
+        '& > a': {
+          fontWeight: '700 !important',
+          fontSize: '30px !important'
+        }
+      },
+    },
     Pathline: {
       copyButton: {
         border: 0,
@@ -94,7 +121,7 @@ module.exports = {
     },
     Playground: {
       preview: {
-        padding: 0,
+        padding: 16,
       },
     },
     PlaygroundError: {
