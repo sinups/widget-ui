@@ -1,63 +1,51 @@
+const fs = require('fs')
 const path = require('path')
 const pkg = require('./package.json')
 const webpackConfig = require('./config/webpack.js')
+const { theme, styles } = require('./docs/styleguide/styles')
+const schema = require('./components.json')
 
+function resolve(...paths) {
+  return fs.realpathSync(path.join(__dirname, ...paths))
+}
+
+function getSections() {
+  return schema.map(({ name, content, components }) => ({
+    name,
+    content: content ? resolve('docs', `${content}.md`) : null,
+    components() {
+      return components.map(componentName => resolve(
+        'src/components',
+        componentName,
+        `${componentName}.js`,
+      ))
+    },
+  }))
+}
 module.exports = {
-  title: `${pkg.name} v${pkg.version}`,
-  components: 'src/lib/components/**/[A-Z]*.js',
+  title: `Justiva Widget v${pkg.version}`,
+  components: 'src/components/**/[A-Z]*.js',
+  sections: getSections(),
   moduleAliases: {
     [pkg.name]: path.resolve(__dirname, 'src/lib'),
   },
-  // ribbon: {
-  //   url: 'https://justiva.ru',
-  //   text: 'Created by justiva',
-  // },
   showSidebar: true,
   usageMode: 'expand',
   skipComponentsWithoutExample: true,
-  theme: {
-    color: {
-      link: '#065fd4',
-      linkHover: '#00adef',
-    },
-    font: ['Helvetica', 'sans-serif'],
+  styleguideComponents: {
+    TableRenderer: path.resolve(__dirname, './docs/styleguide/Table'),
+    // PathlineRenderer: path.resolve(__dirname, './docs/styleguide/Pathline'),
   },
-  styles: {
-    Ribbon: {
-      root: {
-        backgroundImage: 'url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png")',
-        backgroundSize: '50px 50px',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right top',
-      },
-      link: {
-        backgroundColor: '#065fd4',
-      },
-    },
-    Heading: {
-      heading2: {
-        fontSize: 26,
-      },
-    },
-    ReactComponent: {
-      root: {
-        marginBottom: 20,
-      },
-      header: {
-        marginBottom: 0,
-      },
-      tabs: {
-        marginBottom: 0,
-      },
-    },
-  },
+  theme,
+  styles,
   webpackConfig,
   getExampleFilename(componentPath) {
-    return componentPath.replace(/[\w\d]+\.js$/i, 'README.md');
+    return componentPath.replace(/[\w\d]+\.js$/i, 'README.md')
   },
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js')
 
     return `import { ${name} } from '${pkg.name}';`
   },
+
 }

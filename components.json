@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Элементы виджета",
+    "components": [
+      "Button"
+    ]
+  },
+  {
+    "name": "Компоненты",
+    "components": [
+      "Checkbox"
+    ]
+  }
+
+]
