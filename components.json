@@ -3,7 +3,8 @@
     "name": "Элементы виджета",
     "components": [
       "Button",
-      "Badge"
+      "Badge",
+      "Loader"
     ]
   },
   {
