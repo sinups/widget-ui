@@ -1,9 +1,9 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Switch from '../../../src/components/Switch'
+import Switch from '../../../../src/components/Switch'
 import styles from './Wrapper.scss';
-import createSequence from '../createSequence';
+import createSequence from '../../createSequence';
 
 const seq = createSequence();
 
@@ -18,7 +18,6 @@ class Wrapper extends PureComponent {
     this.state = {
       isTransparent: false
     };
-
     this.id = 'background_toggler_' + seq.next();
   }
 
@@ -38,7 +37,7 @@ class Wrapper extends PureComponent {
       }}>
         <Switch
           id={this.id}
-          size="compact"
+          size="medium"
           className={styles.toggle}
           on={isTransparent}
           onClick={this.handleBackgroundToggle}
@@ -55,7 +54,7 @@ class Wrapper extends PureComponent {
 
   render() {
     const wrapperClassName = classNames(styles.wrapper, this.state.isTransparent ? styles.transparent : styles.white);
-
+    // console.log('children', getPathLine())
     return (
 
         <Fragment>
@@ -63,7 +62,9 @@ class Wrapper extends PureComponent {
             <header className={styles.header}>
               {this.renderBackgroundToggle()}
               <div className={styles.spacer} />
-             Sinups
+              <a target='_blank' href={`https://www.npmjs.com/package/wgt-ui`}>
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.3.0/svg/package.svg" alt="npm icon" />
+              </a>
             </header>
             <div className={wrapperClassName}>
               {this.props.children}
