@@ -122,7 +122,6 @@ module.exports = {
     Playground: {
       preview: {
         padding: 0,
-        border: 0,
       },
     },
     PlaygroundError: {

@@ -1,8 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
-import Checkbox from '../../../src/components/Checkbox';
+import Switch from '../../../src/components/Switch'
 import styles from './Wrapper.scss';
 import createSequence from '../createSequence';
 
@@ -23,23 +22,34 @@ class Wrapper extends PureComponent {
     this.id = 'background_toggler_' + seq.next();
   }
 
-  handleBackgroundToggle = (isTransparent) => this.setState({ isTransparent });
-
+  handleBackgroundToggle = () => {
+    this.setState(state => ({
+      isTransparent: !state.isTransparent
+    }));
+  }
 
   renderBackgroundToggle() {
     const { isTransparent } = this.state;
 
     return (
-      // <Switcher
-      // id={this.id}
-      // name="toggle"
-      // className={styles.toggle}
-      // value={isTransparent}
-      // onChange={this.handleBackgroundToggle}
-      // label="Прозрачность"
-      // />
-
-      <Checkbox  value={isTransparent} name="toggle" id={this.id} className={styles.toggle} onChange={this.handleBackgroundToggle}>Прозрачность</Checkbox>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+        <Switch
+          id={this.id}
+          size="compact"
+          className={styles.toggle}
+          on={isTransparent}
+          onClick={this.handleBackgroundToggle}
+          value={isTransparent}
+          label="Прозрачность"
+        />
+        <span style={{
+          marginLeft: '10px',
+          alignItems: 'center'
+        }}> Прозрачность </span>
+      </div>
     );
   }
 

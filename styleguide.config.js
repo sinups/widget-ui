@@ -37,7 +37,8 @@ module.exports = {
   skipComponentsWithoutExample: true,
   styleguideComponents: {
     TableRenderer: path.resolve(__dirname, './docs/styleguide/Customizer/Table'),
-    Preview: path.resolve(__dirname, './docs/styleguide/Customizer/Preview'),
+    // Preview: path.resolve(__dirname, './docs/styleguide/Customizer/Preview'),
+    Wrapper: resolve('docs/styleguide/Wrapper/Wrapper.js'),
     // PathlineRenderer: path.resolve(__dirname, './docs/styleguide/Customizer/Pathline'),
   },
   theme,

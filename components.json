@@ -4,7 +4,8 @@
     "components": [
       "Button",
       "Badge",
-      "Loader"
+      "Loader",
+      "Switch"
     ]
   },
   {
