@@ -9,6 +9,13 @@
     ]
   },
   {
+    "name": "Элементы Формы",
+    "components": [
+      "TextField",
+      "InputField"
+    ]
+  },
+  {
     "name": "Компоненты",
     "components": [
       "Checkbox"
