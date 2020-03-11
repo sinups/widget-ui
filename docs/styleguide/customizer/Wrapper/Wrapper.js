@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Switch from '../../../../src/components/Switch'
 import styles from './Wrapper.scss';
-import createSequence from '../../createSequence';
+import createSequence from '../../utilits/createSequence';
 
 const seq = createSequence();
 
