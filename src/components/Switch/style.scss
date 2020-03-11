@@ -9,6 +9,14 @@ $basicMove: $basicWidth - $basicSize;
 
 $compactHeight: 16px;
 $compactWidth: 25px;
+
+$mediumHeight: 20px;
+$mediumWidth: 32px;
+
+$mediumSize: $mediumHeight - 2px;
+$mediumMove: $mediumWidth - $mediumSize;
+
+
 $compactSize: $compactHeight - 2px;
 $compactMove: $compactWidth - $compactSize;
 
@@ -16,7 +24,9 @@ $compactMove: $compactWidth - $compactSize;
   position: relative;
   display: inline-block;
   outline: none;
-
+  &:focus {
+    outline: none;
+  }
   &:hover {
     .#{$base-class}__track {
       &--enabled {
@@ -33,6 +43,12 @@ $compactMove: $compactWidth - $compactSize;
     width: $basicWidth;
     height: $basicHeight;
   }
+
+  &--medium {
+    width: $mediumWidth;
+    height: $mediumHeight;
+  }
+
 
   &--compact {
     width: $compactWidth;
@@ -118,6 +134,21 @@ $compactMove: $compactWidth - $compactSize;
       &--disabled {
         left: 2px;
         right: calc(#{$compactMove} - 2px);
+      }
+    }
+
+    &--medium {
+      width: calc(#{$mediumSize});
+      height: calc(#{$mediumSize});
+
+      &--enabled {
+        left: calc(#{$mediumMove} - 2px);
+        right: 2px;
+      }
+
+      &--disabled {
+        left: 2px;
+        right: calc(#{$mediumMove} - 2px);
       }
     }
   }

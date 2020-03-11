@@ -47,6 +47,9 @@
 
 .toggle {
   flex: 0 0 auto;
+  &:focus {
+    outline: none;
+  }
 }
 
 .spacer {

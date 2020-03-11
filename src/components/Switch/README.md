@@ -23,7 +23,7 @@ const onChange = (e) => setState({isOn: !state.isOn});
 
 <div style={{display: 'flex', alignItems: 'center'}}>
   <span style={{marginRight: '10px', alignItems: 'center'}}> Enable sound notifications for customers </span>
-  <Switch size="compact" onChange={onChange} on={state.isOn}/>
+  <Switch size="medium" onChange={onChange} on={state.isOn}/>
 </div>
 ```
 

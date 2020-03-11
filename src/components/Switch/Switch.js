@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import styles from './style.scss';
 import getMergedClassNames from '../../utils/getMergedClassNames';
 
-const acceptedSizes = ['basic', 'compact'];
+const acceptedSizes = ['basic', 'compact','medium'];
 const baseClass = 'switch';
 const cx = classNames.bind(styles);
 const noop = () => {};
