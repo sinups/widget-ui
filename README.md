@@ -2,7 +2,8 @@
 ## Widget UI kit 
 ![npm](https://img.shields.io/npm/v/wgt-ui?color=green&label=Current%20Version&logo=sinups)
 ![GitHub stars](https://img.shields.io/github/stars/sinups/widget-ui?color=green)
-
+![GitHub pull requests](https://img.shields.io/github/issues-pr/sinups/widget-ui)
+![GitHub repo size](https://img.shields.io/github/repo-size/sinups/widget-ui?color=green&label=Repo%20)
 ### Browser Support
 
 | <img src="https://clipboardjs.com/assets/images/chrome.png" width="48px" height="48px" alt="Chrome logo"> | <img src="https://clipboardjs.com/assets/images/edge.png" width="48px" height="48px" alt="Edge logo"> | <img src="https://clipboardjs.com/assets/images/firefox.png" width="48px" height="48px" alt="Firefox logo"> | <img src="https://clipboardjs.com/assets/images/ie.png" width="48px" height="48px" alt="Internet Explorer logo"> | <img src="https://clipboardjs.com/assets/images/opera.png" width="48px" height="48px" alt="Opera logo"> | <img src="https://clipboardjs.com/assets/images/safari.png" width="48px" height="48px" alt="Safari logo"> |
@@ -32,7 +33,7 @@ import { Button } from 'wgt-ui'
 
 ```
 
-### Scripts
+### Сборка
 
 - `yarn dev` : Executes the develop mode, running watcher and the Stylguide, rebuilding your library on every change.
 - `yarn start` : Only serves the Styleguide.
