@@ -31,6 +31,7 @@ onInputChange = (e) => {
 <h3>Inline Input Field</h3>
 
 ```js
+
 initialState = { value: '', error: null };
 
 onInputChange = (e) => {
@@ -46,7 +47,7 @@ onInputChange = (e) => {
     });
   }
 }
-
+<div style={{ margin: 'auto', width: 410 }}>
 <InputField
   value={state.value}
   inline
@@ -57,6 +58,7 @@ onInputChange = (e) => {
   description='Text longer than 5 character will trigger error'
   onChange={onInputChange}
 />
+</div>
 ```
 
 
@@ -74,7 +76,7 @@ onInputChange = (e) => {
 />
 ```
 
-<h3>Best practices</h3>
+<h3>Лучшие практики</h3>
 <ul>
   <li><b>Labels:</b>
     Form labels should be short, set in sentence case, without punctuation or articles.
