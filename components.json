@@ -4,8 +4,8 @@
     "components": [
       "Button",
       "Badge",
-      "Loader",
-      "Switch"
+      "Switch",
+      "CheckboxField"
     ]
   },
   {
@@ -13,13 +13,14 @@
     "components": [
       "TextField",
       "InputField",
-      "TextAreaField"
+      "TextAreaField",
+      "RadioButton"
     ]
   },
   {
     "name": "Компоненты",
     "components": [
-      "Checkbox"
+      "Loader"
     ]
   }
 ]
