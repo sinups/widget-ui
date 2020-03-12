@@ -1,2 +1,2 @@
-export { default } from './InputField'
-export { default } from './Input'
+export { default as InputField } from './InputField'
+export { default as Input } from './Input'
