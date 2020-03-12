@@ -2,6 +2,7 @@
   {
     "name": "Элементы виджета",
     "components": [
+      "Avatar",
       "Button",
       "Badge",
       "Switch",

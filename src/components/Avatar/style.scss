@@ -1,0 +1,60 @@
+$base-class: "avatar";
+
+.#{$base-class} {
+  display: flex;
+  position: relative;
+
+  &--compact {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--regular {
+    width: 40px;
+    height: 40px;
+  }
+
+  &--large {
+    width: 60px;
+    height: 60px;
+  }
+
+  &--x-large {
+    width: 72px;
+    height: 72px;
+  }
+
+  &--display {
+    width: 96px;
+    height: 96px;
+  }
+
+  &__image {
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  &__status-indicator {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0 0 0 3px #fff;
+    position: absolute;
+    z-index: 1;
+    bottom: 7%;
+    right: 7%;
+
+    &--online {
+      background-color: #46b776;
+    }
+
+    &--away {
+      background-color: #cccccc;
+    }
+
+    &--offline {
+      background-color: #f3574c;
+    }
+  }
+}
