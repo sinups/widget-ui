@@ -4,13 +4,13 @@ export const KeyCodes = {
   arrowDown: 40,
   esc: 27,
   space: 32,
-  backspace: 8
-};
+  backspace: 8,
+}
 
 export const KeyNames = {
   enter: 'Enter',
   arrowUp: 'ArrowUp',
   arrowDown: 'ArrowDown',
   esc: 'Escape',
-  space: ' '
-};
+  space: ' ',
+}
