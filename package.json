@@ -1,6 +1,6 @@
 {
   "name": "wgt-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules and React Styleguidist",
   "author": "sinups",
   "license": "MIT",
@@ -71,6 +71,7 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-watch": "^6.0.1",
     "gh-pages": "^2.1.1",
+    "gulp": "^4.0.2",
     "inquirer": "6.5.0",
     "jasmine-expect": "^4.0.3",
     "lodash": "4.17.13",
