@@ -12,9 +12,16 @@
 
 UI-кит для внутренних продуктов Justiva.
 
+Необходимые внешние зависимости системы:
+
+[`node`](https://nodejs.org/en/) 12 и `npm`
+
 ### Установка
 
 + Ставь зависимость из npm
+Необходимые внешние зависимости системы:
+
+[`Package Link`](https://www.npmjs.com/package/wgt-ui)
 
 ```shell
 npm i wgt-ui
