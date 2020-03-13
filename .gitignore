@@ -27,3 +27,4 @@ package-lock.json
 /styleguide
 /dist
 yarn.lock
+.prettierrc
