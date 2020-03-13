@@ -5,9 +5,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './style.module.scss'
-
-const { breadcrumbStyles, dot, subContentStyle } = styles
+import { breadcrumbStyles, dot, subContentStyle } from './style.module.scss'
 
 const Breadcrumbs = ({ content, subContent, className }) => (
   <div className={`${breadcrumbStyles} ${className}`}>
