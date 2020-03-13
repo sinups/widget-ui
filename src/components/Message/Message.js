@@ -59,11 +59,20 @@ Message.propTypes = {
   className: PropTypes.string,
   children: PropTypes.element.isRequired,
   backgroundColor: PropTypes.string,
+  /** Закругление краев окна сообщения */
   borderRadius: PropTypes.number,
+  /** Цвет шрифта */
   color: PropTypes.string,
+  /** Расположить сообщение справа */
   right: PropTypes.bool,
+  /** Расположить сообщение слева */
   left: PropTypes.bool,
+  /** Расположить сообщение по центру */
   center: PropTypes.bool,
+  /** По умолчанию не выводит "Хлебные крошки", если передать параметр пустым `breadcrumbs`,
+   *  то выводит стандартный текст "хлебных крошек".
+   *  массив с одним элементом `breadcrumbs={['Виктория']}` выводит только главный контент.
+   *  массив с двумя элементами `breadcrumbs={['Виктория', 'Юрист Онлайн']}` выводит главный контент и второстепенный контент. */
   breadcrumbs: PropTypes.array,
 }
 
