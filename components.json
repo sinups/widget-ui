@@ -22,7 +22,8 @@
     "name": "Компоненты",
     "components": [
       "Loader",
-      "Message"
+      "Message",
+      "Breadcrumbs"
     ]
   }
 ]
