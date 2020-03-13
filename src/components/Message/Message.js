@@ -27,6 +27,19 @@ const Message = ({
     return 'flex-start'
   }
 
+  function renderBreadcrumbs() {
+    if (breadcrumbs.length) {
+      return (
+        <Breadcrumbs
+          content={breadcrumbs[0]}
+          subContent={breadcrumbs.length > 1 && breadcrumbs[1]}
+        />
+      )
+    }
+
+    if (breadcrumbs) return <Breadcrumbs />
+  }
+
   return (
     <MessageStyles
       backgroundColor={backgroundColor}
@@ -35,12 +48,7 @@ const Message = ({
       position={position()}
     >
       <div className={`${className} content`}>
-        {breadcrumbs && (
-          <Breadcrumbs
-            content={breadcrumbs[0]}
-            subContent={breadcrumbs.length > 1 && breadcrumbs[1]}
-          />
-        )}
+        {renderBreadcrumbs()}
         {children}
       </div>
     </MessageStyles>
@@ -67,7 +75,7 @@ Message.defaultProps = {
   right: false,
   left: false,
   center: false,
-  breadcrumbs: [],
+  breadcrumbs: false,
 }
 
 export default Message

@@ -11,14 +11,14 @@ const Breadcrumbs = ({ content, subContent }) => (
   <BreadcrumbsStyles>
     <div className="support__name">{content}</div>
     {content && subContent && <div className="dot"> </div>}
-    <div className="support__info">{subContent}</div>
+    {subContent && <div className="support__info">{subContent}</div>}
   </BreadcrumbsStyles>
 )
 
 Breadcrumbs.propTypes = {
-  /** Имя отправителя сообщения */
+  /** Главный контент */
   content: PropTypes.string,
-  /** Статус отправителя */
+  /** Дополнительный контент */
   subContent: PropTypes.string,
 }
 

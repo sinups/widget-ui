@@ -1,14 +1,15 @@
 ```jsx
-  <Message left breadcrumbs={['Виктория', 'Юрист Онлайн']}>
-    Hello from Message! wfjnwejkn ewdfeiuwh iuewdhehwdiu iuedhiuewdeiuwh
-    uehidhewd iuwheiuhdiuedh iuwehdeiuwdhuh
+  <Message left breadcrumbs>
+    Ut tempus, augue sit amet fermentum egestas, nulla dui placerat ipsum, vitae vehicula velit velit a mauris.
+    Proin egestas sapien sit amet mattis rutrum. Curabitur dignissim faucibus ligula, in luctus ipsum vestibulum ac.
+    Nulla pharetra tempor lorem, ut convallis turpis faucibus eget.
   </Message>
   <Message right color="#fff" backgroundColor="#2A65FF" breadcrumbs={['Ваше Сообщение']}>
-    Hello from Message! wfjnwejkn ewdfeiuwh iuewdhehwdiu iuedhiuewdeiuwh
-    uehidhewd iuwheiuhdiuedh iuwehdeiuwdhuh
+    Ut tempus, augue sit amet fermentum egestas, nulla dui placerat ipsum, vitae vehicula velit velit a mauris.
+    Proin egestas sapien sit amet mattis rutrum. Curabitur dignissim faucibus ligula, in luctus ipsum vestibulum ac.
+    Nulla pharetra tempor lorem, ut convallis turpis faucibus eget.
   </Message>
-    <Message right color="#fff" backgroundColor="#2A65FF" breadcrumbs>
-    Hello from Message! wfjnwejkn ewdfeiuwh iuewdhehwdiu iuedhiuewdeiuwh
-    uehidhewd iuwheiuhdiuedh iuwehdeiuwdhuh
+    <Message right color="#fff" backgroundColor="#2A65FF">
+    Ut tempus, augue sit amet fermentum egestas, nulla dui placerat ipsum, vitae vehicula velit velit a mauris.
   </Message>
 ```
