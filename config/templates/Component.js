@@ -4,30 +4,23 @@
  */
 
 <% if (functional) { -%>
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 <% } else { -%>
 import React, { PureComponent} from 'react';
 <% } -%>
 <% if (styles) { -%>
 import classNames from 'classnames';
-
 import styles from './styles.scss';
-<% } -%>
 
-export type <%= name %>Props = {
-<% if (styles) { -%>
-  className?: string,
 <% } -%>
-  children?: Node
-};
-
 <% if (functional) { -%>
-export function <%= name %>(props: <%= name %>Props) {
+function <%= name %>(props) {
 <% if (styles) { -%>
   const classes = classNames(styles.container, props.className);
 
   return (
-    <div className={classes}>
+    <div classNames={classes}>
       {props.children}
     </div>
   );
@@ -39,6 +32,22 @@ export function <%= name %>(props: <%= name %>Props) {
   );
 <% } -%>
 }
+
+<%= name %>.propTypes = {
+  <% if (styles) { -%>
+  /** Дополнительный класс */
+  className: PropTypes.string,
+  <%} -%>
+  /** Дочерние элементы <%= name %> */
+  children: PropTypes.node.isRequired,
+  /** Клик на Элемент */
+  onClick: PropTypes.func,
+}
+
+<%= name %>.defaultProps = {
+  onClick: () => {},
+}
+
 export default <%= name %>
 <% } else { -%>
 export class <%= name %> extends PureComponent<<%= name %>Props> {

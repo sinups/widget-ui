@@ -3,3 +3,7 @@
  * @<%= devname %>
  */
 @import '../../scss/variables/colors';
+
+.container {
+  font-family: $font;
+}
