@@ -61,7 +61,7 @@ Message.propTypes = {
   backgroundColor: PropTypes.string,
   /** Закругление краев окна сообщения */
   borderRadius: PropTypes.number,
-  /** Цвет шрифта */
+  /** Цвет текста */
   color: PropTypes.string,
   /** Расположить сообщение справа */
   right: PropTypes.bool,
