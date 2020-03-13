@@ -2,10 +2,4 @@
  * Copyright <%= new Date().getFullYear() -%> wdgt <dev@justiva.ru>
  * @<%= devname %>
  */
-@import '../../styles/variables.scss';
-
-/* Styles */
-.container {
-  all: initial;
-  font-family: $font-family;
-}
+@import '../../scss/variables/colors';

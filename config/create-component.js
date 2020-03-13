@@ -74,7 +74,7 @@ inquirer.prompt(questions).then((options) => {
   render(options, 'Component.js', `${options.name}.js`);
   render(options, 'index.js', 'index.js');
   if (options.styles) {
-    render(options, 'Component.scss', `${options.name}.scss`);
+    render(options, 'Component.scss', 'styles.scss');
   }
 
   info(`Component ${options.name} successfully created!`);

@@ -11,7 +11,7 @@ import React, { PureComponent} from 'react';
 <% if (styles) { -%>
 import classNames from 'classnames';
 
-import styles from './<%= name %>.scss';
+import styles from './styles.scss';
 <% } -%>
 
 export type <%= name %>Props = {
