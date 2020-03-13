@@ -59,7 +59,7 @@ Message.propTypes = {
   className: PropTypes.string,
   children: PropTypes.element.isRequired,
   backgroundColor: PropTypes.string,
-  /** Закругление краев окна сообщения */
+  /** Закругление краев окна сообщения (в px) */
   borderRadius: PropTypes.number,
   /** Цвет текста */
   color: PropTypes.string,
