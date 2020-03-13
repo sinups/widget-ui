@@ -35,9 +35,7 @@ const Message = ({
       position={position()}
     >
       <div className={`${className} content`}>
-        {breadcrumbs && breadcrumbs.length < 2 ? (
-          <Breadcrumbs content={breadcrumbs[0]} />
-        ) : (
+        {breadcrumbs && (
           <Breadcrumbs
             content={breadcrumbs[0]}
             subContent={breadcrumbs.length > 1 && breadcrumbs[1]}
