@@ -5,8 +5,8 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import MessageStyles from './MessageStyles'
 import Breadcrumbs from '../Breadcrumbs'
+import { messageStyles, content } from './style.module.scss'
 
 const Message = ({
   className,
@@ -40,18 +40,25 @@ const Message = ({
     if (breadcrumbs) return <Breadcrumbs />
   }
 
+  const inlineStyles = {
+    parent: { justifyContent: position() },
+    children: {
+      backgroundColor,
+      color,
+      borderRadius,
+    },
+  }
+
   return (
-    <MessageStyles
-      backgroundColor={backgroundColor}
-      borderRadius={borderRadius}
-      color={color}
-      position={position()}
+    <div
+      className={`${messageStyles} ${className}`}
+      style={inlineStyles.parent}
     >
-      <div className={`${className} content`}>
+      <div className={`${className} ${content}`} style={inlineStyles.children}>
         {renderBreadcrumbs()}
         {children}
       </div>
-    </MessageStyles>
+    </div>
   )
 }
 

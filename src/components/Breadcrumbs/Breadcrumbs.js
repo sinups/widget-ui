@@ -5,14 +5,16 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import BreadcrumbsStyles from './BreadcrumbsStyles'
+import styles from './style.module.scss'
 
-const Breadcrumbs = ({ content, subContent }) => (
-  <BreadcrumbsStyles>
-    <div className="support__name">{content}</div>
-    {content && subContent && <div className="dot"> </div>}
-    {subContent && <div className="support__info">{subContent}</div>}
-  </BreadcrumbsStyles>
+const { breadcrumbStyles, dot, subContentStyle } = styles
+
+const Breadcrumbs = ({ content, subContent, className }) => (
+  <div className={`${breadcrumbStyles} ${className}`}>
+    <div>{content}</div>
+    {content && subContent && <div className={dot}> </div>}
+    {subContent && <div className={subContentStyle}>{subContent}</div>}
+  </div>
 )
 
 Breadcrumbs.propTypes = {
@@ -20,9 +22,11 @@ Breadcrumbs.propTypes = {
   content: PropTypes.string,
   /** Дополнительный контент */
   subContent: PropTypes.string,
+  className: PropTypes.string,
 }
 
 Breadcrumbs.defaultProps = {
+  className: '',
   content: 'Виктория',
   subContent: 'Юрист Онлайн',
 }
