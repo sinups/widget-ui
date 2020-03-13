@@ -28,3 +28,4 @@ package-lock.json
 /dist
 yarn.lock
 .prettierrc
+.vscode
