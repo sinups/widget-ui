@@ -1,5 +1,5 @@
-import * as React from 'react'
-import * as PropTypes from 'prop-types'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { LoaderWrapper } from './LoaderWrapper'
 import { LoaderSpinner } from './LoaderSpinner'
 import { LoaderLabel } from './LoaderLabel'
