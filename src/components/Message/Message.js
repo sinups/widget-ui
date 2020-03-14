@@ -6,7 +6,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Breadcrumbs from '../Breadcrumbs'
-import { messageStyles, content } from './style.module.scss'
+import styles from './style.module.scss'
 
 const Message = ({
   className,
@@ -51,10 +51,10 @@ const Message = ({
 
   return (
     <div
-      className={`${messageStyles} ${className}`}
+      className={`${styles.messageStyles} ${className}`}
       style={inlineStyles.parent}
     >
-      <div className={`${className} ${content}`} style={inlineStyles.children}>
+      <div className={`${className} ${styles.content}`} style={inlineStyles.children}>
         {renderBreadcrumbs()}
         {children}
       </div>
