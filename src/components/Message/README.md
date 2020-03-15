@@ -1,4 +1,5 @@
-```jsx
+```js
+<div style={{ margin: 'auto', width: 410 }}>
   <Message left breadcrumbs>
     Здравствуйте!  👋
     У вас есть вопрос по теме статьи?
@@ -11,4 +12,5 @@
   <Message right color="#fff" backgroundColor="#2A65FF">
     Подскажите что делать ?
   </Message>
+</div>
 ```
