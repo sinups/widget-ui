@@ -6,7 +6,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Breadcrumbs from '../Breadcrumbs'
-import styles from './style.module.scss'
+import styles from './style.scss'
 
 const Message = ({
   className,
@@ -51,7 +51,7 @@ const Message = ({
 
   return (
     <div
-      className={`${styles.messageStyles} ${className}`}
+      className={`${styles.message} ${className}`}
       style={inlineStyles.parent}
     >
       <div className={`${className} ${styles.content}`} style={inlineStyles.children}>
@@ -63,6 +63,7 @@ const Message = ({
 }
 
 Message.propTypes = {
+  /** Дополнительный класс */
   className: PropTypes.string,
   children: PropTypes.element.isRequired,
   backgroundColor: PropTypes.string,

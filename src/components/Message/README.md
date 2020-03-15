@@ -1,17 +1,14 @@
 ```jsx
   <Message left breadcrumbs>
-    Ut tempus, augue sit amet fermentum egestas, nulla dui placerat ipsum, vitae vehicula velit velit a mauris.
-    Proin egestas sapien sit amet mattis rutrum. Curabitur dignissim faucibus ligula, in luctus ipsum vestibulum ac.
-    Nulla pharetra tempor lorem, ut convallis turpis faucibus eget.
+    Здравствуйте!  👋
+    У вас есть вопрос по теме статьи?
   </Message>
 
   <Message right color="#fff" backgroundColor="#2A65FF" breadcrumbs={['Ваше Сообщение']}>
-    Ut tempus, augue sit amet fermentum egestas, nulla dui placerat ipsum, vitae vehicula velit velit a mauris.
-    Proin egestas sapien sit amet mattis rutrum. Curabitur dignissim faucibus ligula, in luctus ipsum vestibulum ac.
-    Nulla pharetra tempor lorem, ut convallis turpis faucibus eget.
+    Мой муж пьет водку, а потом избивает меня. Хочу засудить эту скатину. Но жалко очень его. Как мне его наказать, но не слишком жестко?
   </Message>
 
   <Message right color="#fff" backgroundColor="#2A65FF">
-    Ut tempus, augue sit amet fermentum egestas, nulla dui placerat ipsum, vitae vehicula velit velit a mauris.
+    Подскажите что делать ?
   </Message>
 ```
