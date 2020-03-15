@@ -5,6 +5,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+//style.scss
 import styles from './style.module.scss'
 
 const Breadcrumbs = ({ content, subContent, className }) => (
