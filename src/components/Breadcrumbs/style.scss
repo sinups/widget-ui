@@ -1,4 +1,4 @@
-  .breadcrumbStyles {
+  .breadcrumb {
     display: flex;
     font-size: 11px;
     line-height: 22px;
@@ -7,12 +7,12 @@
     margin-bottom: 3px;
     justify-content: flex-start;
 
-    .subContentStyle,
+    .subContent,
     .dot {
       opacity: 0.5;
     }
 
-    .subContentStyle {
+    .subContent {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
