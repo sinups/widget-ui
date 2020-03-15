@@ -25,9 +25,7 @@ function getSections() {
 module.exports = {
   title: `Justiva Widget v${pkg.version}`,
   components: 'src/components/**/[A-Z]*.js',
-  // editorConfig: {
-  //   theme: 'dracula',
-  // },
+  serverPort: 5001,
   sections: getSections(),
   // moduleAliases: {
   //   [pkg.name]: path.resolve(__dirname, 'src'),
