@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path
+    transform="rotate(-90)"
+    transform-origin="50% 50%"
+    d="M20.293 13.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 1.414-1.414L16 17.586l4.293-4.293z"
+  />
+</svg>
