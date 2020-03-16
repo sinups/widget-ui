@@ -23,7 +23,8 @@
     "components": [
       "Loader",
       "Message",
-      "Breadcrumbs"
+      "Breadcrumbs",
+      "Icon"
     ]
   }
 ]
