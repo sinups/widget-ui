@@ -1,0 +1,3 @@
+```jsx
+<Typing></Typing>
+```

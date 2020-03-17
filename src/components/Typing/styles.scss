@@ -1,0 +1,109 @@
+/**
+ * Copyright 2020 wdgt <dev@justiva.ru>
+ * @Sinups
+ */
+@import '../../scss/variables/colors';
+
+.container {
+  all: initial;
+  font-family: $font;
+}
+
+
+.typing {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.indicator {
+  width: 60px;
+  height: 40px !important;
+  background: #E7F6FF;
+  border-radius:6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.dotted {
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dot {
+  display: inline-block;
+  animation: bounce 1s infinite ease-in-out;
+  transform-origin: 50% 50%;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color:  $primary-color;
+
+  &:nth-child(2) {
+    animation-delay: 160ms;
+  }
+
+  &:nth-child(3) {
+    animation-delay: calc(160ms * 2);
+  }
+}
+
+.normal {
+  &.dotted {
+    height:6px;
+
+    & .dot {
+      width: 6px;
+      height:6px;
+      margin: 0 2px 0 1px;
+    }
+  }
+}
+
+.text {
+  margin-left: 15px;
+  vertical-align: middle;
+  letter-spacing: -0.2px;
+  font-size:15px;
+  line-height: 1.5;
+  color: #000;
+  font-style: italic;
+
+}
+
+/* Animation */
+.enter {
+  opacity: 0.01;
+}
+
+.enterActive {
+  transition: opacity 100ms ease;
+  opacity: 1;
+}
+
+.leave {
+  opacity: 1;
+}
+
+.leaveActive {
+  transition: opacity 100ms ease;
+  opacity: 0.01;
+}
+
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: initial;
+  }
+
+  30% {
+    transform: translate(0, -3px);
+  }
+}
+
+
