@@ -8,13 +8,14 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.scss'
 import Avatar from '../Avatar'
+import Breadcrumbs from '../Breadcrumbs'
 
 function Notification(props) {
   const classes = classNames(styles.container, props.className)
 
   return (
     <div className={classes}>
-      <div className={styles.notification}>
+      <div className={styles.notification} style={{ background: `${props.bgNotification}`}} >
         <div className={styles.avatar}>
           <Avatar
             img="https://i.ibb.co/DLTcH8x/Bitmap-1.jpg"
@@ -23,8 +24,8 @@ function Notification(props) {
           />
         </div>
         <div className={styles.info}>
-          {/*<Breadcrumbs />*/}
-         <p className={styles.sub_title}>{props.children}</p>
+          <Breadcrumbs />
+          <p className={styles.sub_title} style={{ color: `${props.textColor}` }}>{props.children}</p>
         </div>
       </div>
     </div>
@@ -34,6 +35,8 @@ function Notification(props) {
 Notification.propTypes = {
   /** Дополнительный класс */
   className: PropTypes.string,
+  textColor: PropTypes.string,
+  bgNotification: PropTypes.string,
   /** Дочерние элементы Notification */
   children: PropTypes.node.isRequired,
   /** Клик на Элемент */
