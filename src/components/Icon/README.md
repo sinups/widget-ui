@@ -1,3 +1,6 @@
 ```jsx
-<Icon name="launcher" color="#000" size={50}/>
+<div style={{ display: 'flex'}}>
+  <Icon name="launcher" color="#2F2E39" size={30}/>
+  <Icon name="close" color="#a09fab" size={'normal'}/>
+</div>
 ```

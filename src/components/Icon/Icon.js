@@ -35,6 +35,7 @@ Icon.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** Название иконки */
   name: PropTypes.string.isRequired,
+  /** Цвет иконки (fill) */
   color: PropTypes.string,
 }
 
