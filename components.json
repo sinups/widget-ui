@@ -6,7 +6,8 @@
       "Button",
       "Badge",
       "Switch",
-      "CheckboxField"
+      "CheckboxField",
+      "Typing"
     ]
   },
   {
