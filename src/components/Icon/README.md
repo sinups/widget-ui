@@ -1,3 +1,3 @@
 ```jsx
-<Icon>Hello from Icon!</Icon>
+<Icon name="launcher" color="#000" size={50}/>
 ```

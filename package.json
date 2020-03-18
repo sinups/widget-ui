@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "react-html-parser": "^2.0.2",
     "react-transition-group": "^4.3.0"
   },
   "peerDependencies": {
