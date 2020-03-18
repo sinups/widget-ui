@@ -35,6 +35,42 @@ $base-class: "avatar";
     width: 100%;
   }
 
+  &--regular &__status-indicator {
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    bottom: 7%;
+    right: 6%;
+    box-shadow: 0 0 0 2px #fff;
+  }
+  
+  &--compact &__status-indicator {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    bottom: 7%;
+    right: 1%;
+    box-shadow: 0 0 0 1px #fff;
+  }
+
+  &--large &__status-indicator {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 2px #fff;
+    bottom: 7%;
+    right: 7%;
+  }
+
+  &x-large &__status-indicator {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    box-shadow: 0 0 0 2px #fff;
+    bottom: 7%;
+    right: 7%;
+  }
+
   &__status-indicator {
     border-radius: 50%;
     width: 15px;
