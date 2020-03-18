@@ -23,7 +23,10 @@
   {
     "name": "Компоненты",
     "components": [
-      "Loader"
+      "Loader",
+      "Message",
+      "Breadcrumbs",
+      "Icon"
     ]
   }
 ]

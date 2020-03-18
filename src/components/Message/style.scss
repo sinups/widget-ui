@@ -1,0 +1,20 @@
+/**
+ * Copyright 2020 wdgt <dev@justiva.ru>
+ * @Zaritsky
+ */
+@import '../../scss/variables/colors';
+
+.message {
+  display: flex;
+
+  .content {
+    text-align: left;
+    padding: 15px 25px;
+    margin-top: 10px;
+    max-width: 350px;
+    min-width: 200px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.35px;
+  }
+}

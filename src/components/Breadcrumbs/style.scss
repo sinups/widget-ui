@@ -1,0 +1,29 @@
+  .breadcrumb {
+    display: flex;
+    font-size: 11px;
+    line-height: 22px;
+    align-items: center;
+    letter-spacing: normal;
+    margin-bottom: 3px;
+    justify-content: flex-start;
+
+    .subContent,
+    .dot {
+      opacity: 0.5;
+    }
+
+    .subContent {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .dot {
+      background: #2f2e39;
+      mix-blend-mode: normal;
+      border-radius: 50%;
+      width: 3px;
+      height: 3px;
+      margin: 0 7px;
+    }
+  }
