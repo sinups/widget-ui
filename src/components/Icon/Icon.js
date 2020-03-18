@@ -6,11 +6,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import ReactHtmlParser from 'react-html-parser'
 import styles from './styles.scss'
-import Icons from './svg/add_member.svg'
-// const IconComponent = Icons['add_member']
-
-// console.log('icon: ', Icons)
 
 const Icon = ({ className, size }) => {
   const classes = classNames(styles.icon, className)
