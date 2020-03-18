@@ -37,13 +37,13 @@ $base-class: "avatar";
 
   &--regular &__status-indicator {
     border-radius: 50%;
-    width: 7px;
-    height: 7px;
-    bottom: 7%;
-    right: 6%;
+    width: 10px;
+    height: 10px;
+    bottom: 3%;
+    right: 3%;
     box-shadow: 0 0 0 2px #fff;
   }
-  
+
   &--compact &__status-indicator {
     border-radius: 50%;
     width: 5px;
