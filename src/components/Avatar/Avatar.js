@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
 import getMergedClassNames from '../../utils/getMergedClassNames'
 import styles from './style.scss'
+import Notification from "../Notification";
 
 const cx = classNames.bind(styles)
 
@@ -44,6 +45,10 @@ Avatar.propTypes = {
   img: PropTypes.string.isRequired,
   size: PropTypes.oneOf(acceptedSizes),
   statusIndicator: PropTypes.oneOf(acceptedStatusIndicators),
+}
+
+Avatar.defaultProps = {
+  img: "https://i.ibb.co/DLTcH8x/Bitmap-1.jpg"
 }
 
 export default Avatar
