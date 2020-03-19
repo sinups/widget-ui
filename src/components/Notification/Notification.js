@@ -15,16 +15,16 @@ function Notification(props) {
 
   return (
     <div className={classes}>
-      <div className={styles.notification} style={{ background: `${props.bgNotification}`}} >
+      <div className={styles.notification} style={{ background: `${props.bgNotification}` }}>
         <div className={styles.avatar}>
           <Avatar
-            img="https://i.ibb.co/DLTcH8x/Bitmap-1.jpg"
+            img={props.avatarUrl}
             size="regular"
             statusIndicator="online"
           />
         </div>
         <div className={styles.info}>
-          <Breadcrumbs />
+          <Breadcrumbs inverted={props.invertColor} />
           <p className={styles.sub_title} style={{ color: `${props.textColor}` }}>{props.children}</p>
         </div>
       </div>
@@ -36,6 +36,8 @@ Notification.propTypes = {
   /** Дополнительный класс */
   className: PropTypes.string,
   textColor: PropTypes.string,
+  invertColor: PropTypes.string,
+  avatarUrl: PropTypes.string,
   bgNotification: PropTypes.string,
   /** Дочерние элементы Notification */
   children: PropTypes.node.isRequired,
