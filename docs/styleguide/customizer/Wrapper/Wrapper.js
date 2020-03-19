@@ -16,7 +16,7 @@ class Wrapper extends PureComponent {
     super(props, context);
 
     this.state = {
-      isTransparent: false
+      isTransparent: true
     };
     this.id = 'background_toggler_' + seq.next();
   }

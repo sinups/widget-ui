@@ -43,7 +43,7 @@ InputField.propTypes = {
   fieldClassName: PropTypes.string,
   inline: PropTypes.bool,
   error: PropTypes.string,
-  description: PropTypes.node
+  description: PropTypes.node,
 }
 
 export default InputField
