@@ -1,3 +1,3 @@
 ```jsx
-<Breadcrumbs  content={'Виктория'} subContent={'Юрист онлайн'} />
+<Breadcrumbs content={'Виктория'} subContent={'Юрист онлайн'} />
 ```

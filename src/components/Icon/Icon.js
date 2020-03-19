@@ -5,12 +5,12 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import ReactHtmlParser from 'react-html-parser'
+import classnames from 'classnames'
 import styles from './styles.scss'
+import IconPack from './Icons'
 
-const Icon = ({ className, size }) => {
-  const classes = classNames(styles.icon, className)
+const Icon = ({ className, size, name, color }) => {
+  const classes = classnames(styles.icon, className)
 
   const detectSize = () => {
     if (typeof size === 'number') return size
@@ -21,7 +21,11 @@ const Icon = ({ className, size }) => {
     return 24
   }
 
-  return <div classNames={classes}>test</div>
+  return (
+    <div className={classes}>
+      <IconPack size={detectSize()} fill={color} name={name} />
+    </div>
+  )
 }
 
 Icon.propTypes = {
@@ -29,11 +33,16 @@ Icon.propTypes = {
   className: PropTypes.string,
   /** Размер указывается в цифрах (px), либо в одном из трех стандартных значений `small, medium, large` */
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Название иконки */
+  name: PropTypes.string.isRequired,
+  /** Цвет иконки (fill) */
+  color: PropTypes.string,
 }
 
 Icon.defaultProps = {
   className: '',
   size: 'medium',
+  color: '#ddd',
 }
 
 export default Icon
