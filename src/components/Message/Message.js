@@ -29,12 +29,7 @@ const Message = ({
 
   function renderBreadcrumbs() {
     if (breadcrumbs.length) {
-      return (
-        <Breadcrumbs
-          content={breadcrumbs[0]}
-          subContent={breadcrumbs.length > 1 && breadcrumbs[1]}
-        />
-      )
+      return <Breadcrumbs content={breadcrumbs} textColor={color} />
     }
 
     if (breadcrumbs) return <Breadcrumbs />
@@ -54,7 +49,10 @@ const Message = ({
       className={`${styles.message} ${className}`}
       style={inlineStyles.parent}
     >
-      <div className={`${className} ${styles.content}`} style={inlineStyles.children}>
+      <div
+        className={`${className} ${styles.content}`}
+        style={inlineStyles.children}
+      >
         {renderBreadcrumbs()}
         {children}
       </div>
