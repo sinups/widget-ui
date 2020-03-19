@@ -24,7 +24,7 @@ function Notification(props) {
           />
         </div>
         <div className={styles.info}>
-          <Breadcrumbs inverted={props.invertColor} />
+          <Breadcrumbs content={props.consultantName} subContent={props.consultantStatus} inverted={props.invertColor} />
           <p className={styles.sub_title} style={{ color: `${props.textColor}` }}>{props.children}</p>
         </div>
       </div>
@@ -35,12 +35,20 @@ function Notification(props) {
 Notification.propTypes = {
   /** Дополнительный класс */
   className: PropTypes.string,
+  /** Цвет текста */
   textColor: PropTypes.string,
+  /** Переключатель Breadcrumbs темный/Светлый */
   invertColor: PropTypes.string,
+  /** Url аватарки */
   avatarUrl: PropTypes.string,
+  /** Background оповещение */
   bgNotification: PropTypes.string,
   /** Дочерние элементы Notification */
   children: PropTypes.node.isRequired,
+  /** Имя консультанта в хлебных крошках */
+  consultantName: PropTypes.string,
+  /** Статус консультанта в хлебных крошках */
+  consultantStatus: PropTypes.string,
   /** Клик на Элемент */
   onClick: PropTypes.func,
 }
