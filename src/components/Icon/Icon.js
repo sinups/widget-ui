@@ -9,7 +9,9 @@ import classnames from 'classnames'
 import styles from './styles.scss'
 import IconPack from './Icons'
 
-const Icon = ({ className, size, name, color }) => {
+const Icon = ({
+  className, size, name, color,
+}) => {
   const classes = classnames(styles.icon, className)
 
   const detectSize = () => {
