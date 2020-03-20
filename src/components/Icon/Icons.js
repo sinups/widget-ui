@@ -34,7 +34,15 @@ const Close = ({ fill, size }) => (
     viewBox="0 0 16 16"
   >
     <rect x="15.0728" y="2.34229" width="18" height="2" rx="1" transform="rotate(135 15.0728 2.34229)" fill={fill} />
-    <rect x="13.6592" y="15.0698" width="18" height="2" rx="0.999999" transform="rotate(-135 13.6592 15.0698)" fill={fill} />
+    <rect
+      x="13.6592"
+      y="15.0698"
+      width="18"
+      height="2"
+      rx="0.999999"
+      transform="rotate(-135 13.6592 15.0698)"
+      fill={fill}
+    />
   </svg>
 
 )
@@ -83,6 +91,28 @@ RightArrow.propTypes = {
   size: PropTypes.string.isRequired,
 }
 
+/** Emoji */
+const Emoji = ({ fill, size }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 32 32"
+    xmlns="http://www.w3.org/2000/svg"
+    fill={fill}
+  >
+    <g fillRule="evenodd">
+      <path d="M16.198 19.44c-3.166 0-5.536-1.225-6.145-1.37-.897-.21-.943.315-.943.665 0 3.457 3.113 5.92 6.89 5.92 3.777 0 6.89-2.463 6.89-5.92 0-.35-.046-.875-.943-.664-.608.147-2.584 1.37-5.75 1.37zm4.068-9.262c1.123 0 2.034 1.205 2.034 2.69 0 1.487-.91 2.692-2.034 2.692-1.124 0-2.035-1.205-2.035-2.69 0-1.487.914-2.692 2.038-2.692m-8.533.004c1.124 0 2.034 1.204 2.034 2.69 0 1.487-.91 2.69-2.035 2.69-1.123 0-2.034-1.203-2.034-2.69 0-1.486.91-2.69 2.035-2.69" />
+      <path d="M16 28.133c6.7 0 12.133-5.432 12.133-12.133C28.133 9.3 22.7 3.867 16 3.867 9.3 3.867 3.867 9.3 3.867 16 3.867 22.7 9.3 28.133 16 28.133zM16 30C8.268 30 2 23.732 2 16S8.268 2 16 2s14 6.268 14 14-6.268 14-14 14z" />
+    </g>
+  </svg>
+
+)
+
+Emoji.propTypes = {
+  fill: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+}
+
 const Icon = ({ name, fill, size }) => {
   switch (name) {
     case 'launcher':
@@ -93,6 +123,8 @@ const Icon = ({ name, fill, size }) => {
       return <ChatIcon fill={fill} size={size} />
     case 'right-arrow':
       return <RightArrow fill={fill} size={size} />
+    case 'emoji':
+      return <Emoji fill={fill} size={size} />
     default:
       break
   }
