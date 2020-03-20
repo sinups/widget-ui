@@ -25,7 +25,9 @@ function Notification(props) {
         </div>
         <div className={styles.info}>
           <Breadcrumbs content={props.breadcrumbs} inverted={props.invertColor} />
-          <p className={styles.sub_title} style={{ color: `${props.textColor}` }}>{props.children}</p>
+          <p className={styles.sub_title} style={{ color: `${props.textColor}` }}>
+            {props.children}
+          </p>
         </div>
       </div>
     </div>

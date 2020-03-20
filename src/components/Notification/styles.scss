@@ -29,9 +29,14 @@
 }
 
 .info {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+  & > * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 
@@ -40,6 +45,7 @@
   font-size: 14px;
   margin: 0;
   line-height: 1;
+
 }
 
 
