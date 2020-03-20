@@ -8,6 +8,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.scss'
 import Avatar from '../Avatar'
+import Icon from '../Icon'
 
 function Header(props) {
   const classes = classNames(styles.container, props.className)
@@ -15,17 +16,23 @@ function Header(props) {
   return (
     <div className={classes}>
       <div className={styles.header} style={{ background: `${props.bgHeader}` }}>
-        <div className={styles.avatar}>
-          <Avatar
-            img={props.avatarUrl}
-            size="regular"
-            statusIndicator="online"
-          />
+        <div className={styles.left_part}>
+          <div className={styles.avatar}>
+            <Avatar
+              img={props.avatarUrl}
+              size="regular"
+              statusIndicator="online"
+            />
+          </div>
+          <div className={styles.info}>
+            <div style={{ color: `${props.textColor}` }}>{props.consultantName}</div>
+            <div className={styles.sub_title} style={{ color: `${props.textColor}` }}>{props.children}</div>
+          </div>
         </div>
-        <div className={styles.info}>
-          <div style={{ color: `${props.textColor}` }}>{props.consultantName}</div>
-          <div className={styles.sub_title} style={{ color: `${props.textColor}` }}>{props.children}</div>
+        <div className={styles.right_part}>
+          <Icon name="close" color={props.textColor} size={16} />
         </div>
+
       </div>
     </div>
   )
