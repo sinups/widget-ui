@@ -1,8 +1,13 @@
 #### Оповещение по умолчанию
 
+<h5>Поведенческие факторы</h5>
+<ul>
+  <li>Если текст выходит за пределы контейнера он обрезается ...</li>
+</ul>
+
 ```jsx
 <div style={{ margin: 'auto', width: 410 }}>
-    <Header textColor="#000" consultantName="Виктория" >Дежурный юрист онлайн - Юстива</Header>
+    <Header consultantName="Виктория" >Дежурный юрист онлайн </Header>
 </div>
 ```
 
@@ -23,15 +28,16 @@
 
 #### Полностью кастомные оповещение
 ```jsx
-<div style={{ margin: 'auto', width: 410 }}>
+<div style={{ margin: 'auto', width: 390 }}>
     <Header 
         invertColor="true" 
         avatarUrl="https://i.ibb.co/pf122MC/Screenshot-at-Feb-17-16-34-55.png"
         bgHeader="#06062b url(https://s5.gifyu.com/images/starsdf5a4c486a790711.gif)" 
         textColor="#fff"
         consultantName="Таролог Дина Залесская"
+        headerHeight="90px"
         >
-        Бесплатная помощь
+        Дежурный юрист онлайн - Бесплатная помощь онлайн
     </Header>
 </div>
 ```

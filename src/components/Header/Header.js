@@ -15,7 +15,7 @@ function Header(props) {
 
   return (
     <div className={classes}>
-      <div className={styles.header} style={{ background: `${props.bgHeader}` }}>
+      <div className={styles.header} style={{ background: `${props.bgHeader}`, height: `${props.headerHeight}` }}>
         <div className={styles.left_part}>
           <div className={styles.avatar}>
             <Avatar
@@ -25,8 +25,8 @@ function Header(props) {
             />
           </div>
           <div className={styles.info}>
-            <div style={{ color: `${props.textColor}` }}>{props.consultantName}</div>
-            <div className={styles.sub_title} style={{ color: `${props.textColor}` }}>{props.children}</div>
+            <div className={styles.title} style={{ color: `${props.textColor}` }}>{props.consultantName}</div>
+            <div className={styles.sub_title} style={{ color: `${props.textColor}` }}><span>{props.children}</span></div>
           </div>
         </div>
         <div className={styles.right_part}>
@@ -45,18 +45,22 @@ Header.propTypes = {
   textColor: PropTypes.string,
   /** Url аватарки */
   avatarUrl: PropTypes.string,
-  /** Background Header */
+  /** Фон шапки */
   bgHeader: PropTypes.string,
   /** Дочерние элементы Notification */
   children: PropTypes.node.isRequired,
   /** Имя консультанта в Header */
   consultantName: PropTypes.string,
+  /** Высота шапки */
+  headerHeight: PropTypes.string,
   /** Клик на Элемент */
   onClick: PropTypes.func,
 }
 
 Header.defaultProps = {
   onClick: () => {},
+  bgHeader: '#2A65FF',
+  textColor: '#fff',
 }
 
 export default Header
