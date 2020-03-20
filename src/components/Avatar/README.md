@@ -20,6 +20,7 @@
   <Avatar
     img="https://i.ibb.co/DLTcH8x/Bitmap-1.jpg"
     size="regular"
+    statusIndicator="online"
   />
   <div style={{ margin: "10px" }} />
   <Avatar
