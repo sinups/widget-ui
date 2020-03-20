@@ -1,18 +1,95 @@
 .form {
+  max-width: 350px;
+  margin-top: 10px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px 25px;
+  position: relative;
+  box-shadow: 0px 16px 64px rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
 
-  .field {
+  .block {
+    position: relative;
+    width: 100%;
     display: block;
-    margin: 5px auto;
-    text-align: center;
+    padding-top: 21px;
+    margin-bottom: 11px;
+    transition: all .4s;
 
-    label, span {
-      display: block;
-      margin-bottom: 10px;
+    .field {
+
+      label {
+        z-index: 999;
+        color: #99989B;
+        font-size: 14px;
+        line-height: 22px;
+        position: absolute;
+        // top: 21px;
+        left: 0;
+        transition: all 0.2s;
+      }
+
+
+      span {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .input {
+        border-radius: 0;
+        width: 100%;
+        display: block;
+        border: none;
+        border-bottom: 1px solid #C1C0C4;
+        font-size: 14px;
+        line-height: 22px;
+        color: #2F2E39;
+        padding: 0 18px 10px 0;
+        box-sizing: border-box;
+        margin-bottom: 21px;
+
+        &:focus {
+          outline: none;
+        }
+
+      }
+
+      .errorText {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.275px;
+        color: #FF0000;
+        opacity: 0.5;
+        text-align: right;
+        cursor: default;
+        user-select: none;
+        animation: fadeInText .3s forwards;
+      }
+
+      .activeLabel {
+        // top: 10px;
+        font-size: 12px;
+        transform: translateY(-20px);
+      }
+
+      .error {
+        border-bottom-color: #FF0000;
+      }
     }
   }
 
-  input[type="submit"] {
-    display: block;
-    margin: 10px auto;
+  @keyframes fadeInText {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
 }
