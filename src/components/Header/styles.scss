@@ -1,0 +1,45 @@
+/**
+ * Copyright 2020 wdgt <dev@justiva.ru>
+ * @Sinups
+ */
+@import '../../scss/variables/colors';
+
+
+.container {
+  all: initial;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-family: $font;
+  align-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+}
+.header {
+  display: flex;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 8px 8px 0px 0px;
+  width: 100%;
+}
+.avatar {
+  margin-right: 20px;
+}
+
+.info {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+
+.sub_title {
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1;
+}
+
+
