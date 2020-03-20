@@ -1,0 +1,77 @@
+/**
+ * Copyright 2020 wdgt <dev@justiva.ru>
+ * @Sinups
+ */
+@import '../../scss/variables/colors';
+
+
+.container {
+  all: initial;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  font-family: $font;
+  color: inherit;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0 28px;
+  height: 80px;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+.left_part {
+  display: flex;
+
+  .avatar {
+    margin-right: 20px;
+  }
+
+  .info {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+
+    .title {
+      font-size: 18px;
+    }
+
+    .sub_title {
+      font-weight: 300;
+      font-size: 12px;
+      margin: 0;
+      line-height: 1;
+      letter-spacing: -0.38px;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      & > * {
+        display: table-cell;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+
+.right_part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  opacity: .5;
+}
+

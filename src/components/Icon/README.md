@@ -1,9 +1,9 @@
 ```jsx
   <Icon name="launcher" color="#a09fab" size={'normal'}/>
-  <Icon name="close" size={'normal'}/>
-  <Icon name="chat-icon" size={'normal'}/>
-  <Icon name="right-arrow" size={'normal'}/>
-  <Icon name="emoji" size={'normal'}/>
-  <Icon name="arrow-down" size={'normal'}/>
-  <Icon name="arrow-up" size={'normal'}/>
+  <Icon name="close" />
+  <Icon name="chat-icon"/>
+  <Icon name="right-arrow"/>
+  <Icon name="emoji"/>
+  <Icon name="arrow-down"/>
+  <Icon name="arrow-up"/>
 ```

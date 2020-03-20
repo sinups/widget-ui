@@ -8,7 +8,8 @@
       "Switch",
       "CheckboxField",
       "Typing",
-      "Notification"
+      "Notification",
+      "Header"
     ]
   },
   {

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
 import getMergedClassNames from '../../utils/getMergedClassNames'
 import styles from './style.scss'
-import Notification from '../Notification'
 
 const cx = classNames.bind(styles)
 
@@ -11,14 +10,16 @@ const baseClass = 'avatar'
 
 const acceptedSizes = ['compact', 'regular', 'large', 'x-large', 'display']
 const acceptedStatusIndicators = ['online', 'away', 'offline']
+const avatarForm = ['square', 'circle']
 
 const Avatar = ({
-  img, size = 'regular', statusIndicator, ...restProps
+  form = 'circle', img, size = 'regular', statusIndicator, ...restProps
 }) => {
   const mergedClassNames = getMergedClassNames(
     cx({
       [baseClass]: true,
       [`${baseClass}--${size}`]: acceptedSizes.some(s => s === size),
+      [`${baseClass}--${form}`]: avatarForm.some(s => s === form),
     }),
   )
 
@@ -45,10 +46,11 @@ Avatar.propTypes = {
   img: PropTypes.string.isRequired,
   size: PropTypes.oneOf(acceptedSizes),
   statusIndicator: PropTypes.oneOf(acceptedStatusIndicators),
+  form: PropTypes.oneOf(avatarForm),
 }
 
 Avatar.defaultProps = {
-  img: 'https://i.ibb.co/DLTcH8x/Bitmap-1.jpg',
+  img: 'https://i.ibb.co/pf122MC/Screenshot-at-Feb-17-16-34-55.png',
 }
 
 export default Avatar
