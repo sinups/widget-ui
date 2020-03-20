@@ -22,8 +22,7 @@
     avatarUrl="https://i.ibb.co/pf122MC/Screenshot-at-Feb-17-16-34-55.png"
     bgNotification="#06062b url(https://s5.gifyu.com/images/starsdf5a4c486a790711.gif)" 
     textColor="#fff"
-    consultantName="Таролог Дина Залесская"
-    consultantStatus="Бесплатная помощь"
+    breadcrumbs={["Таролог Дина Залесская","Бесплатная помощь"]}
     >
     Я практикующий таролог, 20 лет...
 </Notification>

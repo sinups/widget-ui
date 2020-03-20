@@ -24,7 +24,7 @@ function Notification(props) {
           />
         </div>
         <div className={styles.info}>
-          <Breadcrumbs content={props.consultantName} subContent={props.consultantStatus} inverted={props.invertColor} />
+          <Breadcrumbs content={props.breadcrumbs} inverted={props.invertColor} />
           <p className={styles.sub_title} style={{ color: `${props.textColor}` }}>{props.children}</p>
         </div>
       </div>
@@ -45,10 +45,8 @@ Notification.propTypes = {
   bgNotification: PropTypes.string,
   /** Дочерние элементы Notification */
   children: PropTypes.node.isRequired,
-  /** Имя консультанта в хлебных крошках */
-  consultantName: PropTypes.string,
-  /** Статус консультанта в хлебных крошках */
-  consultantStatus: PropTypes.string,
+  /** хлебные крошкаи */
+  breadcrumbs: PropTypes.array,
   /** Клик на Элемент */
   onClick: PropTypes.func,
 }
