@@ -66,6 +66,23 @@ ChatIcon.propTypes = {
   size: PropTypes.string.isRequired,
 }
 
+/** Arrow right */
+const RightArrow = ({ fill, size }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 13 13"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 13L12.5 6.5L0 0L4 6.5L0 13Z" fill={fill} />
+  </svg>
+)
+
+RightArrow.propTypes = {
+  fill: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+}
+
 const Icon = ({ name, fill, size }) => {
   switch (name) {
     case 'launcher':
@@ -74,6 +91,8 @@ const Icon = ({ name, fill, size }) => {
       return <Close fill={fill} size={size} />
     case 'chat-icon':
       return <ChatIcon fill={fill} size={size} />
+    case 'right-arrow':
+      return <RightArrow fill={fill} size={size} />
     default:
       break
   }
