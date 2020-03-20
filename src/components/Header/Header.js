@@ -47,9 +47,9 @@ Header.propTypes = {
   avatarUrl: PropTypes.string,
   /** Фон шапки */
   bgHeader: PropTypes.string,
-  /** Дочерние элементы Notification */
+  /** Дочерние элементы  */
   children: PropTypes.node.isRequired,
-  /** Имя консультанта в Header */
+  /** Имя консультанта */
   consultantName: PropTypes.string,
   /** Высота шапки */
   headerHeight: PropTypes.string,
