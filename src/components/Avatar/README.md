@@ -4,7 +4,15 @@
 
 ```js
 <div>
-  <Avatar img="https://i.ibb.co/pf122MC/Screenshot-at-Feb-17-16-34-55.png" />
+  <Avatar form="circle" img="https://i.ibb.co/pf122MC/Screenshot-at-Feb-17-16-34-55.png" />
+</div>
+```
+
+####  Avatar Form
+
+```js
+<div>
+  <Avatar form="square" img="https://i.ibb.co/pf122MC/Screenshot-at-Feb-17-16-34-55.png" />
 </div>
 ```
 

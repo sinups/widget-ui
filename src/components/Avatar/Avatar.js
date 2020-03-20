@@ -10,14 +10,16 @@ const baseClass = 'avatar'
 
 const acceptedSizes = ['compact', 'regular', 'large', 'x-large', 'display']
 const acceptedStatusIndicators = ['online', 'away', 'offline']
+const avatarForm = ['square', 'circle']
 
 const Avatar = ({
-  img, size = 'regular', statusIndicator, ...restProps
+  form = 'circle', img, size = 'regular', statusIndicator, ...restProps
 }) => {
   const mergedClassNames = getMergedClassNames(
     cx({
       [baseClass]: true,
       [`${baseClass}--${size}`]: acceptedSizes.some(s => s === size),
+      [`${baseClass}--${form}`]: avatarForm.some(s => s === form),
     }),
   )
 
@@ -44,6 +46,7 @@ Avatar.propTypes = {
   img: PropTypes.string.isRequired,
   size: PropTypes.oneOf(acceptedSizes),
   statusIndicator: PropTypes.oneOf(acceptedStatusIndicators),
+  form: PropTypes.oneOf(avatarForm),
 }
 
 Avatar.defaultProps = {

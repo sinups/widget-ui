@@ -4,6 +4,18 @@ $base-class: "avatar";
   display: flex;
   position: relative;
 
+  &--square {
+    img {
+      border-radius: 5px;
+    }
+
+  }
+  &--circle {
+    img {
+      border-radius: 50%;
+    }
+  }
+
   &--compact {
     width: 20px;
     height: 20px;
@@ -31,9 +43,10 @@ $base-class: "avatar";
 
   &__image {
     display: block;
-    border-radius: 50%;
     width: 100%;
   }
+
+
 
   &--regular &__status-indicator {
     border-radius: 50%;
