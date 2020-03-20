@@ -1,0 +1,39 @@
+$base-class: "launcher";
+
+.#{$base-class} {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background: #2A65FF;
+  border-radius: 50%;
+
+  &--small {
+    width: 54px;
+    height: 54px;
+  }
+
+  &--regular {
+    width: 64px;
+    height: 64px;
+  }
+
+  &--large {
+    width: 74px;
+    height: 74px;
+  }
+
+
+  &__chat_icon {
+    display: block;
+  }
+
+  &__close_icon {
+
+    display: block;
+  }
+
+}

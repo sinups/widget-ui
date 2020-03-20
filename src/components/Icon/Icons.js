@@ -58,7 +58,7 @@ const ChatIcon = ({ fill, size }) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 31 31"
+    viewBox="0 0 28 28"
     fill={fill}
     xmlns="http://www.w3.org/2000/svg"
   >
