@@ -44,7 +44,7 @@ Icon.propTypes = {
 Icon.defaultProps = {
   className: '',
   size: 'medium',
-  color: '#ddd',
+  color: '#a09fab',
 }
 
 export default Icon

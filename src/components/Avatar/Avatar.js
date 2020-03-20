@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
 import getMergedClassNames from '../../utils/getMergedClassNames'
 import styles from './style.scss'
-import Notification from "../Notification";
+import Notification from '../Notification'
 
 const cx = classNames.bind(styles)
 
@@ -48,7 +48,7 @@ Avatar.propTypes = {
 }
 
 Avatar.defaultProps = {
-  img: "https://i.ibb.co/DLTcH8x/Bitmap-1.jpg"
+  img: 'https://i.ibb.co/DLTcH8x/Bitmap-1.jpg',
 }
 
 export default Avatar
