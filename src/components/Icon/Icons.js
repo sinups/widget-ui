@@ -122,7 +122,7 @@ const ArrowDown = ({ fill, size }) => (
     xmlns="http://www.w3.org/2000/svg"
     fill={fill}
   >
-    <path fill-rule="evenodd" d="M11 14l5 5 5-5"/>
+    <path fillRule="evenodd" d="M11 14l5 5 5-5"/>
   </svg>
 
 )
@@ -141,7 +141,7 @@ const ArrowUp = ({ fill, size }) => (
     xmlns="http://www.w3.org/2000/svg"
     fill={fill}
   >
-    <path fill-rule="evenodd" d="M11 18l5-5 5 5"/>
+    <path fillRule="evenodd" d="M11 18l5-5 5 5"/>
   </svg>
 
 )
