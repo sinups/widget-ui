@@ -53,12 +53,32 @@ Close.propTypes = {
   size: PropTypes.string.isRequired,
 }
 
+const ChatIcon = ({ fill, size }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 31 31"
+    fill={fill}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path fillRule="evenodd" d="M10.7059 21.1394C4.79294 21.1394 0 16.4075 0 10.5697C0 4.73198 4.79294 0 10.7059 0H17.2941C23.2071 0 28 4.73198 28 10.5697C28 16.4075 23.9129 21.1394 18 21.1394L10.7059 29V21.1394Z" />
+  </svg>
+
+)
+
+ChatIcon.propTypes = {
+  fill: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+}
+
 const Icon = ({ name, fill, size }) => {
   switch (name) {
     case 'launcher':
       return <Launcher fill={fill} size={size} />
     case 'close':
       return <Close fill={fill} size={size} />
+    case 'chat-icon':
+      return <ChatIcon fill={fill} size={size} />
     default:
       break
   }
