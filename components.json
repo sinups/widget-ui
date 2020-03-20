@@ -17,7 +17,8 @@
       "TextField",
       "InputField",
       "TextAreaField",
-      "RadioButton"
+      "RadioButton",
+      "Form"
     ]
   },
   {
