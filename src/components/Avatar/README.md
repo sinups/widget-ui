@@ -34,7 +34,7 @@
   />
   <div style={{ margin: "10px" }} />
   <Avatar
-    img="https://i.ibb.co/pf122MC/Screenshot-at-Feb-17-16-34-55.png"
+    img="https://i.ibb.co/HqjkSTm/Bitmap.png"
     size="display"
   />
   <div style={{ margin: "10px" }} />
