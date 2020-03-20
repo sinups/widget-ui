@@ -7,7 +7,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './style.scss'
 
-const Breadcrumbs = ({ content, className, inverted, textColor }) => {
+const Breadcrumbs = ({
+  content, className, inverted, textColor,
+}) => {
   let color = inverted ? '#fff' : '#2f2e39'
   if (textColor !== '') color = textColor
 
