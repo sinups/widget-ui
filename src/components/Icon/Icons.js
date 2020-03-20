@@ -1,6 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const iconStandardProps = {
+  fill: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+}
+
 /** Launcher */
 const Launcher = ({ fill, size }) => (
   <svg
@@ -20,20 +25,20 @@ const Launcher = ({ fill, size }) => (
   </svg>
 )
 
-Launcher.propTypes = {
-  fill: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-}
+Launcher.propTypes = iconStandardProps
 
 /** Close */
 const Close = ({ fill, size }) => (
-  <svg
-    width={size}
-    height={size}
-    fill="none"
-    viewBox="0 0 16 16"
-  >
-    <rect x="15.0728" y="2.34229" width="18" height="2" rx="1" transform="rotate(135 15.0728 2.34229)" fill={fill} />
+  <svg width={size} height={size} fill="none" viewBox="0 0 16 16">
+    <rect
+      x="15.0728"
+      y="2.34229"
+      width="18"
+      height="2"
+      rx="1"
+      transform="rotate(135 15.0728 2.34229)"
+      fill={fill}
+    />
     <rect
       x="13.6592"
       y="15.0698"
@@ -44,13 +49,9 @@ const Close = ({ fill, size }) => (
       fill={fill}
     />
   </svg>
-
 )
 
-Close.propTypes = {
-  fill: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-}
+Close.propTypes = iconStandardProps
 
 /** ChatIcon */
 const ChatIcon = ({ fill, size }) => (
@@ -66,13 +67,9 @@ const ChatIcon = ({ fill, size }) => (
       d="M10.7059 21.1394C4.79294 21.1394 0 16.4075 0 10.5697C0 4.73198 4.79294 0 10.7059 0H17.2941C23.2071 0 28 4.73198 28 10.5697C28 16.4075 23.9129 21.1394 18 21.1394L10.7059 29V21.1394Z"
     />
   </svg>
-
 )
 
-ChatIcon.propTypes = {
-  fill: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-}
+ChatIcon.propTypes = iconStandardProps
 
 /** Arrow right */
 const RightArrow = ({ fill, size }) => (
@@ -86,10 +83,7 @@ const RightArrow = ({ fill, size }) => (
   </svg>
 )
 
-RightArrow.propTypes = {
-  fill: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-}
+RightArrow.propTypes = iconStandardProps
 
 /** Emoji */
 const Emoji = ({ fill, size }) => (
@@ -105,13 +99,9 @@ const Emoji = ({ fill, size }) => (
       <path d="M16 28.133c6.7 0 12.133-5.432 12.133-12.133C28.133 9.3 22.7 3.867 16 3.867 9.3 3.867 3.867 9.3 3.867 16 3.867 22.7 9.3 28.133 16 28.133zM16 30C8.268 30 2 23.732 2 16S8.268 2 16 2s14 6.268 14 14-6.268 14-14 14z" />
     </g>
   </svg>
-
 )
 
-Emoji.propTypes = {
-  fill: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-}
+Emoji.propTypes = iconStandardProps
 
 /** Arrow Down */
 const ArrowDown = ({ fill, size }) => (
@@ -124,13 +114,9 @@ const ArrowDown = ({ fill, size }) => (
   >
     <path fillRule="evenodd" d="M11 14l5 5 5-5" />
   </svg>
-
 )
 
-ArrowDown.propTypes = {
-  fill: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-}
+ArrowDown.propTypes = iconStandardProps
 
 /** Arrow ArrowUp */
 const ArrowUp = ({ fill, size }) => (
@@ -143,13 +129,9 @@ const ArrowUp = ({ fill, size }) => (
   >
     <path fillRule="evenodd" d="M11 18l5-5 5 5" />
   </svg>
-
 )
 
-ArrowUp.propTypes = {
-  fill: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-}
+ArrowUp.propTypes = iconStandardProps
 
 const Icon = ({ name, fill, size }) => {
   switch (name) {
