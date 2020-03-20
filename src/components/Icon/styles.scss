@@ -1,9 +1,18 @@
 /**
  * Copyright 2020 wdgt <dev@justiva.ru>
  * @Zaritsky
+ * @Sinups
  */
 @import '../../scss/variables/colors';
 
 .icon {
-  font-family: $font;
+  display: inline-flex;
+  cursor: inherit;
+  user-select: none;
+  vertical-align: middle;
+  background-color: transparent;
+  flex-flow: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }

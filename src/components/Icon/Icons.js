@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+/** Launcher */
 const Launcher = ({ fill, size }) => (
   <svg
     width={size}
@@ -24,28 +25,18 @@ Launcher.propTypes = {
   size: PropTypes.string.isRequired,
 }
 
+/** Close */
 const Close = ({ fill, size }) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 31 31"
-    fill="white"
-    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 16 16"
   >
-    <g>
-      <rect width="31" height="31" rx="15.5" fill={fill} />
-      <path
-        d="M19.7422 11.2574L11.2569 19.7426"
-        stroke="white"
-        strokeLinecap="round"
-      />
-      <path
-        d="M19.7421 19.7426L11.2568 11.2574"
-        stroke="white"
-        strokeLinecap="round"
-      />
-    </g>
+    <rect x="15.0728" y="2.34229" width="18" height="2" rx="1" transform="rotate(135 15.0728 2.34229)" fill={fill} />
+    <rect x="13.6592" y="15.0698" width="18" height="2" rx="0.999999" transform="rotate(-135 13.6592 15.0698)" fill={fill} />
   </svg>
+
 )
 
 Close.propTypes = {
@@ -53,6 +44,7 @@ Close.propTypes = {
   size: PropTypes.string.isRequired,
 }
 
+/** ChatIcon */
 const ChatIcon = ({ fill, size }) => (
   <svg
     width={size}
@@ -61,7 +53,10 @@ const ChatIcon = ({ fill, size }) => (
     fill={fill}
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path fillRule="evenodd" d="M10.7059 21.1394C4.79294 21.1394 0 16.4075 0 10.5697C0 4.73198 4.79294 0 10.7059 0H17.2941C23.2071 0 28 4.73198 28 10.5697C28 16.4075 23.9129 21.1394 18 21.1394L10.7059 29V21.1394Z" />
+    <path
+      fillRule="evenodd"
+      d="M10.7059 21.1394C4.79294 21.1394 0 16.4075 0 10.5697C0 4.73198 4.79294 0 10.7059 0H17.2941C23.2071 0 28 4.73198 28 10.5697C28 16.4075 23.9129 21.1394 18 21.1394L10.7059 29V21.1394Z"
+    />
   </svg>
 
 )
