@@ -113,6 +113,44 @@ Emoji.propTypes = {
   size: PropTypes.string.isRequired,
 }
 
+/** Arrow Down */
+const ArrowDown = ({ fill, size }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 32 32"
+    xmlns="http://www.w3.org/2000/svg"
+    fill={fill}
+  >
+    <path fill-rule="evenodd" d="M11 14l5 5 5-5"/>
+  </svg>
+
+)
+
+ArrowDown.propTypes = {
+  fill: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+}
+
+/** Arrow ArrowUp */
+const ArrowUp = ({ fill, size }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 32 32"
+    xmlns="http://www.w3.org/2000/svg"
+    fill={fill}
+  >
+    <path fill-rule="evenodd" d="M11 18l5-5 5 5"/>
+  </svg>
+
+)
+
+ArrowUp.propTypes = {
+  fill: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+}
+
 const Icon = ({ name, fill, size }) => {
   switch (name) {
     case 'launcher':
@@ -125,6 +163,10 @@ const Icon = ({ name, fill, size }) => {
       return <RightArrow fill={fill} size={size} />
     case 'emoji':
       return <Emoji fill={fill} size={size} />
+    case 'arrow-down':
+      return <ArrowDown fill={fill} size={size} />
+    case 'arrow-up':
+      return <ArrowUp fill={fill} size={size} />
     default:
       break
   }
