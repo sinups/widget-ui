@@ -7,7 +7,7 @@ const onSubmit = value => console.log(value);
 <div style={{display:'block'}}>
 <Form rules={{required, minValue}} onSubmit={onSubmit}>
   <input type="text" name='test-1' label="Test" validation={'required'} />
-  <input type="number" name='test-2' label="Test 2" validation={['required', 'minValue']} />
+  <input type="text" name='test-2' label="Test 2" validation={['required', 'minValue']} />
 </Form>
 </div>
 ```

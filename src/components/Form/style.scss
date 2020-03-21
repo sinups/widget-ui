@@ -18,6 +18,21 @@
 
     .field {
 
+      .form_success_ico {
+        position: absolute;
+        bottom: 23px;
+        width: 14px;
+        height: 10px;
+        right: 5px;
+        animation: fadeInSuccessIcon .3s forwards;
+
+        svg {
+          width: 14px;
+          height: 10px;
+          fill: none;
+        }
+      }
+
       label {
         z-index: 999;
         color: #99989B;
@@ -89,6 +104,18 @@
 
     to {
       transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInSuccessIcon {
+    from {
+      transform: translateX(40%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%);
       opacity: 1;
     }
   }

@@ -43,7 +43,6 @@ const Form = ({ children, className, rules, onSubmit }) => (
                   <div className={styles.field}>
                     <div className={styles.block}>
                       <label htmlFor={input.name} className={activeLabel(meta)}>
-                        {console.log(input.name, meta.active)}
                         {label}
                       </label>
                       {cloneElement(child, {
@@ -51,6 +50,8 @@ const Form = ({ children, className, rules, onSubmit }) => (
                         className: `${styles.input} ${meta.error && meta.touched && styles.error}`,
                         id: input.name,
                       })}
+                      {!meta.error && meta.touched && <SuccessIcon />}
+
                       {meta.error && meta.touched && <span className={styles.errorText} dangerouslySetInnerHTML={{ __html: meta.error }} />}
                     </div>
                   </div>
@@ -65,6 +66,16 @@ const Form = ({ children, className, rules, onSubmit }) => (
       </form>
     )}
   />
+)
+
+const SuccessIcon = () => (
+  <div className={styles.form_success_ico}>
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="form_success_ico">
+        <path d="M1 5L5 9L13 1" stroke="#67CC43" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
+    </svg>
+  </div>
 )
 
 Form.propTypes = {
