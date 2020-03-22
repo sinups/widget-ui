@@ -84,12 +84,17 @@ const Launcher = ({
 }
 
 Launcher.propTypes = {
+  /** Размер компонента. */
   size: PropTypes.oneOf(acceptedSizes),
   /** Управление open состоянием компонента */
-  open: boolean,
-  pulsation: boolean,
-  animation3D: boolean,
+  open: PropTypes.bool,
+  /** Анимация в Лаунчере */
+  pulsation: PropTypes.bool,
+  /** Анимация 3D */
+  animation3D: PropTypes.bool,
+  /** Размер Иконки. */
   iconSize: PropTypes.string,
+  /** Цвет Иконки. */
   iconColor: PropTypes.string,
 }
 

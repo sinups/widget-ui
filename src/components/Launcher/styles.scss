@@ -10,6 +10,7 @@ $base-class: "launcher";
   height: 64px;
   background: #2A65FF;
   border-radius: 50%;
+  cursor: pointer;
 
   .fix {
     /* flexbox fix for safari */
