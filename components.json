@@ -17,6 +17,7 @@
     "components": [
       "TextField",
       "InputField",
+      "Input",
       "TextAreaField",
       "RadioButton",
       "Form"

@@ -7,7 +7,7 @@ import React, { cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import { Form as FormWrapper, Field } from 'react-final-form'
 import Button from '../Button'
-import styles from './style.scss'
+import styles from './styles.scss'
 
 const Form = ({ children, className, rules, onSubmit }) => (
   <FormWrapper
@@ -81,8 +81,11 @@ const SuccessIcon = () => (
 Form.propTypes = {
   /** Дочерние элементы Form */
   children: PropTypes.node.isRequired,
+  /** Дополнительный класс */
   className: PropTypes.string,
+  /** Правила (функции валидации) */
   rules: PropTypes.object,
+  /** Функция отправки формы */
   onSubmit: PropTypes.func.isRequired,
 }
 

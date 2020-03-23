@@ -1,18 +1,24 @@
-.form {
+/**
+ * Copyright 2020 wdgt <dev@justiva.ru>
+ * @Zaritsky
+ */
+@import '../../scss/variables/colors';
+
+.input {
+  font-family: $font;
   max-width: 350px;
   margin-top: 10px;
-  background: white;
+  background: #fff;
   border-radius: 8px;
   padding: 20px 25px;
   position: relative;
-  box-shadow: 0px 16px 64px rgba(0, 0, 0, 0.12);
   margin: 0 auto;
 
   .block {
     position: relative;
     width: 100%;
     display: block;
-    padding-top: 21px;
+    padding-top: 10px;
     margin-bottom: 11px;
     transition: all .4s;
 
@@ -39,15 +45,8 @@
         font-size: 14px;
         line-height: 22px;
         position: absolute;
-        // top: 21px;
         left: 0;
         transition: all 0.2s;
-      }
-
-
-      span {
-        display: block;
-        margin-bottom: 10px;
       }
 
       .input {
@@ -62,6 +61,8 @@
         padding: 0 18px 10px 0;
         box-sizing: border-box;
         margin-bottom: 21px;
+        background-color: transparent;
+
 
         &:focus {
           outline: none;
@@ -93,30 +94,6 @@
       .error {
         border-bottom-color: #FF0000;
       }
-    }
-  }
-
-  @keyframes fadeInText {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInSuccessIcon {
-    from {
-      transform: translateX(40%);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateX(0%);
-      opacity: 1;
     }
   }
 }

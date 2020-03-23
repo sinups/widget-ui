@@ -20,7 +20,7 @@ function <%= name %>(props) {
   const classes = classNames(styles.container, props.className);
 
   return (
-    <div classNames={classes}>
+    <div className={classes}>
       {props.children}
     </div>
   );
