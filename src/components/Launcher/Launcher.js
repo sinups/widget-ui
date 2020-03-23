@@ -43,7 +43,6 @@ const Launcher = ({
 
   function renderIcon() {
     const iconSize = detectIconSize()
-    console.log(iconSize)
     const style = {
       width: iconSize,
       height: iconSize,
