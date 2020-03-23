@@ -9,7 +9,8 @@ import classNames from 'classnames'
 import InputMask from 'react-input-mask'
 import styles from './styles.scss'
 
-function Input({ className, label, type, id, error, touched, active, mask, ...props }) {
+function Input({ className, label, type, id, error, touched, active, mask, maskChar, ...props }) {
+  console.log('maskPlaceholder: ', maskChar)
   const classes = classNames(styles.input, className)
 
   const activeLabel = meta => {
@@ -33,8 +34,9 @@ function Input({ className, label, type, id, error, touched, active, mask, ...pr
             {label}
           </label>
         )}
-        {mask && <InputMask mask={mask} className={`${styles.input} ${error && touched && styles.error}`} id={id} name={id} {...props} />}
+        {mask && <InputMask maskChar={maskChar} mask={mask} className={`${styles.input} ${error && touched && styles.error}`} id={id} name={id} {...props} />}
         {!mask && <input className={`${styles.input} ${error && touched && styles.error}`} type={type} id={id} name={id} {...props} />}
+
         {error && touched && <span className={styles.errorText} dangerouslySetInnerHTML={{ __html: error }} />}
         {!error && touched && <SuccessIcon />}
       </div>
@@ -62,6 +64,7 @@ Input.propTypes = {
   error: PropTypes.bool,
   touched: PropTypes.bool,
   active: PropTypes.bool,
+  maskChar: PropTypes.string,
 }
 
 Input.defaultProps = {
@@ -72,6 +75,7 @@ Input.defaultProps = {
   error: false,
   touched: false,
   active: false,
+  maskChar: '_',
 }
 
 export default Input
