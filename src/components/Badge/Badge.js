@@ -4,6 +4,9 @@ import cx from 'classnames'
 import styles from './style.scss'
 import Launcher from "../Launcher";
 
+/**
+ * @return {null}
+ */
 function Badge({
   children, className: extraClassName, secondary, show, ...props
 }) {
@@ -12,13 +15,14 @@ function Badge({
     ...(extraClassName ? { [extraClassName]: true } : {}),
   })
   if (show === true) {
-  return (
-    <span className={className} {...props}>
-      {children}
-    </span>
-  )} else {
-    return null
+    return (
+      <span className={className} {...props}>
+        {children}
+      </span>
+    )
   }
+
+  return null
 }
 
 Badge.propTypes = {
