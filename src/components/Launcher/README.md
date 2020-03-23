@@ -1,27 +1,25 @@
 #### Default Launcher
 ```jsx
-
+import Button from '../Button'
 initialState = {
   pulsation: false,
   open:false,
   animation3D:false,
-  glyph:'chat_icons',
-  glyphClose:'close'
 };
 const toggleAnimation = () => setState({ pulsation: !state.pulsation });
 const toggleAnimation3d = () => setState({ animation3D: !state.animation3D });
 const open = () => setState({  open: !state.open });
 
 <div>
-    <button className="demo_btn" onClick={toggleAnimation}>
+    <Button size="compact" primary onClick={toggleAnimation}>
        {state.pulsation ? 'Pulsation ...' : 'Pulsation'}
-    </button>
-    <button onClick={toggleAnimation3d}>
+    </Button>
+    <Button size="compact" primary onClick={toggleAnimation3d}>
        {state.animation3D ? 'Rotate ...' : 'Rotate Animation'}
-    </button>
-    <button onClick={open}>
+    </Button>
+    <Button size="compact" primary onClick={open}>
        {state.open ? 'Opened ...' : 'Open'}
-    </button>
+    </Button>
     <hr/>
 
     <Launcher  
@@ -40,5 +38,5 @@ const open = () => setState({  open: !state.open });
 ```
 #### Pulsation and 3D animation  Launcher
 ```jsx
-<Launcher animation3D></Launcher>
+<Launcher animation3D pulsation theme="#3bbf51"></Launcher>
 ```

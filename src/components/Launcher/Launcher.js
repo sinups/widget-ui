@@ -10,7 +10,7 @@ const baseClass = 'launcher'
 const acceptedSizes = ['small', 'regular', 'large']
 
 const Launcher = ({
-  size = 'large', open, pulsation, animation3D, iconSize, iconColor, ...restProps
+  size = 'large', open, theme, pulsation, animation3D, iconSize, iconColor, ...restProps
 }) => {
   const detectSize = () => {
     if (typeof iconSize === 'number') return iconSize
@@ -25,6 +25,7 @@ const Launcher = ({
     const style = {
       width: '100px',
       height: '100px',
+      background: theme,
     }
 
     return <div className={styles.pulsation} style={style} />
@@ -42,7 +43,7 @@ const Launcher = ({
         <Icon
           name={open ? 'close' : 'chat-icon'}
           className={styles.icon}
-          size={iconSize}
+          size={open ? 19 : iconSize}
           color={iconColor}
         />
       )
@@ -64,18 +65,35 @@ const Launcher = ({
         </div>
       )
     }
-    // widget openq
-    return <Icon name="close" className={styles.icon} color="#fff" size={iconSize} />
+    // widget open
+    return <Icon name="close" className={styles.icon} color="#fff" size={19} />
   }
   const mergedClassNames = getMergedClassNames(
     cx({
       [baseClass]: true,
       [`${baseClass}--${size}`]: acceptedSizes.some(s => s === size),
+      [styles.open]: open,
+      [styles.closed]: !open,
+      [styles.animation3d]: !open && animation3D,
     }),
   )
 
+  // const buttonClassName = classNames(
+  //   styles.container,
+  //   styles[String(size)],
+  //   {
+  //     [styles.open]: open,
+  //     [styles.animation3d]: !open && animation3D,
+  //     [styles[theme]]: flat,
+  //   },
+  //   className,
+  // );
+  const launcherBg = {
+    background: theme,
+  }
+
   return (
-    <div {...restProps} className={mergedClassNames}>
+    <div {...restProps} className={mergedClassNames} style={launcherBg}>
 
       <span className={styles.fix}>{renderIcon()}</span>
       {pulsation ? renderPulsation() : null}
@@ -96,6 +114,8 @@ Launcher.propTypes = {
   iconSize: PropTypes.string,
   /** Цвет Иконки. */
   iconColor: PropTypes.string,
+  /** Цвет лаунчра. */
+  theme: PropTypes.string,
 }
 
 Launcher.defaultProps = {
@@ -105,6 +125,8 @@ Launcher.defaultProps = {
   size: 'regular',
   iconColor: '#fff',
   iconSize: 'medium',
+  theme: '#2A65FF',
+
 }
 
 export default Launcher
