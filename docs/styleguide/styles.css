@@ -10,34 +10,15 @@ hr {
   margin: 1rem 0;
   display: block;
   border: 0;
-  background-color: color-mod(#000 alpha(10%));
+  background-color: #000;
 }
 
-:global(.styleguide__buttons) {
-  & :global(.Button__container),
-  & :global(.ButtonNext__container),
-  & :global(.Launcher__container) {
-    margin: 4px !important;
-  }
-}
 
-:global(.styleguide__searchResultsButtons) {
-  & > button {
-    margin-right: 4px !important;
-  }
-}
-
-:global(.WelcomeMessage__button) {
-  padding: 8px 0 !important;
-  display: inline-flex !important;
-  align-content: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-right: 30px !important;
-  font-size: 16px !important;
-
-  & :global(.WelcomeMessage__button__icon) {
-    margin-right: 6px !important;
-    color: currentColor !important;
-  }
+:global(.demo_btn) {
+  padding: 7px 10px !important;
+  border: none !important;
+  border-radius: 3px !important;
+  background: #2964ff !important;
+  color: #fff !important;
+  margin-right: 10px !important;
 }
