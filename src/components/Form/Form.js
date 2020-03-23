@@ -9,7 +9,9 @@ import { Form as FormWrapper, Field } from 'react-final-form'
 import Button from '../Button'
 import styles from './styles.scss'
 
-const Form = ({ children, className, rules, onSubmit }) => (
+const Form = ({
+  children, className, rules, onSubmit,
+}) => (
   <FormWrapper
     onSubmit={onSubmit}
     render={({ handleSubmit }) => (

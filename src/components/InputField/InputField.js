@@ -4,7 +4,9 @@ import Input from './Input'
 import TextField from '../TextField'
 
 const InputField = React.forwardRef((props, ref) => {
-  const { inline, error, description, labelText, className, id, fieldClassName, ...restProps } = props
+  const {
+    inline, error, description, labelText, className, id, fieldClassName, ...restProps
+  } = props
 
   return (
     <TextField inline={inline} error={error} description={description} labelText={labelText} className={className} htmlFor={id}>
