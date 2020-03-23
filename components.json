@@ -18,8 +18,10 @@
     "components": [
       "TextField",
       "InputField",
+      "Input",
       "TextAreaField",
-      "RadioButton"
+      "RadioButton",
+      "Form"
     ]
   },
   {

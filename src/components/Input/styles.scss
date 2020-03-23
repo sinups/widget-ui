@@ -1,0 +1,116 @@
+/**
+ * Copyright 2020 wdgt <dev@justiva.ru>
+ * @Zaritsky
+ */
+@import '../../scss/variables/colors';
+
+
+  .input {
+  font-family: $font;
+    position: relative;
+    width: 100%;
+    display: block;
+    padding-top: 10px;
+    margin-bottom: 11px;
+    transition: all .4s;
+
+    .field {
+
+      .form_success_ico {
+        position: absolute;
+        bottom: 23px;
+        width: 14px;
+        height: 10px;
+        right: 5px;
+        animation: fadeInSuccessIcon .3s forwards;
+
+        svg {
+          width: 14px;
+          height: 10px;
+          fill: none;
+        }
+      }
+
+      label {
+        z-index: 999;
+        color: #99989B;
+        font-size: 14px;
+        line-height: 22px;
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+
+      .input {
+        border-radius: 0;
+        width: 100%;
+        display: block;
+        border: none;
+        border-bottom: 1px solid #C1C0C4;
+        font-size: 14px;
+        line-height: 22px;
+        color: #2F2E39;
+        padding: 0 18px 10px 0;
+        box-sizing: border-box;
+        margin-bottom: 21px;
+        background-color: transparent;
+
+
+        &:focus {
+          outline: none;
+        }
+
+      }
+
+      .errorText {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.275px;
+        color: #FF0000;
+        opacity: 0.5;
+        text-align: right;
+        cursor: default;
+        user-select: none;
+        animation: fadeInText .3s forwards;
+        margin-bottom: 10px;
+      }
+
+      .activeLabel {
+        // top: 10px;
+        font-size: 12px;
+        transform: translateY(-20px);
+      }
+
+      .error {
+        border-bottom-color: #FF0000;
+      }
+    }
+  
+
+  @keyframes fadeInText {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInSuccessIcon {
+    from {
+      transform: translateX(40%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+}
