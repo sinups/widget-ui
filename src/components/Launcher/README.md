@@ -13,10 +13,10 @@ const open = () => setState({  open: !state.open });
 <div>
     <Button size="compact" primary onClick={toggleAnimation}>
        {state.pulsation ? 'Pulsation ...' : 'Pulsation'}
-    </Button>
+    </Button>{' '}
     <Button size="compact" primary onClick={toggleAnimation3d}>
        {state.animation3D ? 'Rotate ...' : 'Rotate Animation'}
-    </Button>
+    </Button>{' '}
     <Button size="compact" primary onClick={open}>
        {state.open ? 'Opened ...' : 'Open'}
     </Button>
