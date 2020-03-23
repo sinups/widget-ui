@@ -36,6 +36,7 @@
     "final-form": "^4.18.7",
     "react-final-form": "^6.3.5",
     "react-html-parser": "^2.0.2",
+    "react-input-mask": "^2.0.4",
     "react-transition-group": "^4.3.0"
   },
   "peerDependencies": {

@@ -4,17 +4,9 @@
  */
 @import '../../scss/variables/colors';
 
-.input {
-  font-family: $font;
-  max-width: 350px;
-  margin-top: 10px;
-  background: #fff;
-  border-radius: 8px;
-  padding: 20px 25px;
-  position: relative;
-  margin: 0 auto;
 
-  .block {
+  .input {
+  font-family: $font;
     position: relative;
     width: 100%;
     display: block;
@@ -83,6 +75,7 @@
         cursor: default;
         user-select: none;
         animation: fadeInText .3s forwards;
+        margin-bottom: 10px;
       }
 
       .activeLabel {
@@ -94,6 +87,30 @@
       .error {
         border-bottom-color: #FF0000;
       }
+    }
+  
+
+  @keyframes fadeInText {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInSuccessIcon {
+    from {
+      transform: translateX(40%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%);
+      opacity: 1;
     }
   }
 }
