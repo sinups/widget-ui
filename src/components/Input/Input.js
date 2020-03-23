@@ -10,7 +10,6 @@ import InputMask from 'react-input-mask'
 import styles from './styles.scss'
 
 function Input({ className, label, type, id, error, touched, active, mask, maskChar, ...props }) {
-  console.log('maskPlaceholder: ', maskChar)
   const classes = classNames(styles.input, className)
 
   const activeLabel = meta => {
@@ -34,7 +33,9 @@ function Input({ className, label, type, id, error, touched, active, mask, maskC
             {label}
           </label>
         )}
-        {mask && <InputMask maskChar={maskChar} mask={mask} className={`${styles.input} ${error && touched && styles.error}`} id={id} name={id} {...props} />}
+        {mask && (
+          <InputMask maskChar={maskChar} mask={mask} className={`${styles.input} ${error && touched && styles.error}`} id={id} name={id} {...props} />
+        )}
         {!mask && <input className={`${styles.input} ${error && touched && styles.error}`} type={type} id={id} name={id} {...props} />}
 
         {error && touched && <span className={styles.errorText} dangerouslySetInnerHTML={{ __html: error }} />}
