@@ -10,7 +10,9 @@ $base-class: "launcher";
   height: 64px;
   background: #2A65FF;
   border-radius: 50%;
+  box-sizing: border-box;
   cursor: pointer;
+  box-shadow: 0 19px 38px 0 rgba(34,36,43,.3);
 
   .fix {
     /* flexbox fix for safari */
@@ -47,10 +49,10 @@ $base-class: "launcher";
   }
 
 }
-
+.border {
+  border: 4px solid #fff;
+}
 .open {
-  box-shadow: 0 19px 38px 0 rgba(34,36,43,.3);
-  /*border: 4px solid #fff;*/
 
 }
 .open .icon {
@@ -188,4 +190,8 @@ $base-class: "launcher";
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg)
   }
+}
+
+.animationEnded {
+  animation:none;
 }

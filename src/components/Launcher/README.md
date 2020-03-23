@@ -34,7 +34,9 @@ const open = () => setState({  open: !state.open });
 
 #### Open Launcher
 ```jsx
-<Launcher open></Launcher>
+<Launcher size="small" iconSize="small" pulsation></Launcher>{'  '}
+<Launcher size="regular" conSize="medium" pulsation></Launcher>{'  '}
+<Launcher size="large" conSize="large" pulsation ></Launcher>
 ```
 #### Pulsation and 3D animation  Launcher
 ```jsx
