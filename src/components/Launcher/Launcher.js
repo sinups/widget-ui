@@ -10,9 +10,9 @@ const baseClass = 'launcher'
 const acceptedSizes = ['small', 'regular', 'large']
 
 const Launcher = ({
-  size = 'large', open, theme, pulsation, animation3D, iconSize, iconColor, ...restProps
+  size = 'large', open, theme, pulsation, border, animation3D, iconFront, iconSize, iconColor, ...restProps
 }) => {
-  const detectSize = () => {
+  const detectIconSize = () => {
     if (typeof iconSize === 'number') return iconSize
     if (iconSize === 'small') return 18
     if (iconSize === 'medium') return 28
@@ -21,10 +21,20 @@ const Launcher = ({
     return 24
   }
 
+  const detectLauncherSize = () => {
+    if (typeof size === 'number') return size
+    if (size === 'small') return 74
+    if (size === 'regular') return 94
+    if (size === 'large') return 114
+
+    return 64
+  }
+
   function renderPulsation() {
+    const launcherSize = detectLauncherSize()
     const style = {
-      width: '100px',
-      height: '100px',
+      width: `${launcherSize}px`,
+      height: `${launcherSize}px`,
       background: theme,
     }
 
@@ -32,14 +42,14 @@ const Launcher = ({
   }
 
   function renderIcon() {
-    const iconSize = detectSize()
+    const iconSize = detectIconSize()
     const style = {
       width: iconSize,
       height: iconSize,
     }
-    if (open === false && animation3D === false) {
-      return (
 
+    if (!open && !animation3D) {
+      return (
         <Icon
           name={open ? 'close' : 'chat-icon'}
           className={styles.icon}
@@ -66,37 +76,27 @@ const Launcher = ({
       )
     }
     // widget open
-    return <Icon name="close" className={styles.icon} color="#fff" size={19} />
+    return <Icon name="close" className={styles.icon} color="#2A65FF" size={19} />
   }
   const mergedClassNames = getMergedClassNames(
     cx({
       [baseClass]: true,
       [`${baseClass}--${size}`]: acceptedSizes.some(s => s === size),
       [styles.open]: open,
-      [styles.closed]: !open,
+      [styles.border]: border,
       [styles.animation3d]: !open && animation3D,
     }),
   )
 
-  // const buttonClassName = classNames(
-  //   styles.container,
-  //   styles[String(size)],
-  //   {
-  //     [styles.open]: open,
-  //     [styles.animation3d]: !open && animation3D,
-  //     [styles[theme]]: flat,
-  //   },
-  //   className,
-  // );
   const launcherBg = {
-    background: theme,
+    background: open ? '#fff' : theme,
   }
 
   return (
     <div {...restProps} className={mergedClassNames} style={launcherBg}>
 
       <span className={styles.fix}>{renderIcon()}</span>
-      {pulsation ? renderPulsation() : null}
+      {pulsation && !open ? renderPulsation() : null}
     </div>
   )
 }
@@ -116,6 +116,10 @@ Launcher.propTypes = {
   iconColor: PropTypes.string,
   /** Цвет лаунчра. */
   theme: PropTypes.string,
+  /** Иконка лаунчра когда виджет закрыт. */
+  iconFront: PropTypes.string,
+  /** Border вокруг лаунчера  */
+  border: PropTypes.bool,
 }
 
 Launcher.defaultProps = {
@@ -125,7 +129,9 @@ Launcher.defaultProps = {
   size: 'regular',
   iconColor: '#fff',
   iconSize: 'medium',
+  iconFront: 'launcher',
   theme: '#2A65FF',
+  border: true,
 
 }
 

@@ -7,7 +7,7 @@
 
 ```jsx
 <div style={{ margin: 'auto', width: 410 }}>
-    <Header consultantName="Виктория" >Дежурный юрист онлайн </Header>
+    <Header consultantName="Виктория"  headerHeight="60px">Дежурный юрист онлайн </Header>
 </div>
 ```
 

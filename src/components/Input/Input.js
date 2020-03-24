@@ -9,7 +9,9 @@ import classNames from 'classnames'
 import InputMask from 'react-input-mask'
 import styles from './styles.scss'
 
-function Input({ className, label, type, id, error, touched, active, mask, maskChar, ...props }) {
+function Input({
+  className, label, type, id, error, touched, active, mask, maskChar, ...props
+}) {
   const classes = classNames(styles.input, className)
 
   const activeLabel = meta => {

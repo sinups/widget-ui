@@ -13,10 +13,10 @@ const open = () => setState({  open: !state.open });
 <div>
     <Button size="compact" primary onClick={toggleAnimation}>
        {state.pulsation ? 'Pulsation ...' : 'Pulsation'}
-    </Button>
+    </Button>{' '}
     <Button size="compact" primary onClick={toggleAnimation3d}>
        {state.animation3D ? 'Rotate ...' : 'Rotate Animation'}
-    </Button>
+    </Button>{' '}
     <Button size="compact" primary onClick={open}>
        {state.open ? 'Opened ...' : 'Open'}
     </Button>
@@ -32,11 +32,16 @@ const open = () => setState({  open: !state.open });
 </div>
 ```
 
-#### Open Launcher
+#### Size Launcher
 ```jsx
-<Launcher open></Launcher>
+<Launcher size="small" iconSize="small" pulsation></Launcher>{'  '}
+<Launcher size="regular" conSize="medium" theme="#3bbf51" pulsation></Launcher>{'  '}
+<Launcher size="large" conSize="large" theme="#3bbf51" pulsation ></Launcher>
 ```
-#### Pulsation and 3D animation  Launcher
+#### Theming Launcher
 ```jsx
+<Launcher animation3D pulsation ></Launcher>{'  '}
+<Launcher animation3D pulsation theme="#010101"></Launcher>{'  '}
+<Launcher animation3D pulsation theme="linear-gradient(120deg,#f8546e -1.04%,#8371f3 138.79%),#c4c4c4"></Launcher>{'  '}
 <Launcher animation3D pulsation theme="#3bbf51"></Launcher>
 ```
