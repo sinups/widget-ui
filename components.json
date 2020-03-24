@@ -31,7 +31,8 @@
       "Loader",
       "Message",
       "Breadcrumbs",
-      "Icon"
+      "Icon",
+      "MessageInput"
     ]
   }
 ]
