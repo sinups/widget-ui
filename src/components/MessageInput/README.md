@@ -6,6 +6,6 @@
   };
 
 <div style={{maxWidth: '350px', display: 'block', margin: '30px auto' }}>
-<MessageInput requiredChar={10}  charForFullWidth={20} requiredChar={5} config={config}/>
+    <MessageInput requiredChar={50}  charForFullWidth={20} requiredChar={5} config={config}/>
 </div>
 ```

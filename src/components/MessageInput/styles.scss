@@ -11,6 +11,15 @@
   padding: 20px 30px;
   border-top: 1px solid #C1C0C4;
   border-radius: 0 0 6px 6px;
+  .btn_group_container {
+    width: 80px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
+    box-sizing: border-box;
+    position: inherit;
+    justify-content: flex-end;
+  }
   .send_btn_box {
     width: 32px;
     height: 32px;
@@ -26,10 +35,8 @@
       margin-right: -3px;
     }
   }
-  .field {
+  .textarea_container {
     display: flex;
-    align-items: center;
-
     textarea {
       width: 100%;
       font-size: 15px;
