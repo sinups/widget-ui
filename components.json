@@ -19,6 +19,7 @@
       "TextField",
       "InputField",
       "Input",
+      "Privacy",
       "TextAreaField",
       "RadioButton",
       "Form"

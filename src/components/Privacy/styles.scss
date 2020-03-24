@@ -1,0 +1,82 @@
+/**
+ * Copyright 2020 wdgt <dev@justiva.ru>
+ * @Sinups
+ */
+@import '../../scss/variables/colors';
+
+
+.privacy_policy {
+  font-family: $font;
+  margin-top: 18px;
+  margin-bottom: 5px;
+  display: flex;
+  position: relative;
+  user-select: none;
+
+  .privacy_policy_text {
+    font-size: 10px;
+    line-height: 11px;
+    color: #A1A3AA;
+    text-decoration: none;
+
+    span {
+      text-decoration-line: underline;
+      cursor: pointer;
+    }
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    border: 1px solid #A1A3AA;
+    border-radius: 3px;
+  }
+
+
+  .container:hover input ~ .checkmark {
+    background-color: rgba(204, 204, 204, 0.13);
+  }
+
+
+  .container input:checked ~ .checkmark {
+    background-color: transparent;
+    border: 1px solid #A1A3AA;
+    border-radius: 3px;
+  }
+
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+
+  .container .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 2px;
+    height: 7px;
+    border: solid #A1A3AA;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+  }
+}
+
