@@ -10,7 +10,22 @@
   background-color: #fff;
   padding: 20px 30px;
   border-top: 1px solid #C1C0C4;
-
+  border-radius: 0 0 6px 6px;
+  .send_btn_box {
+    width: 32px;
+    height: 32px;
+    background: #2a65ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: -7px;
+    cursor: pointer;
+    .icon {
+      margin-right: -3px;
+    }
+  }
   .field {
     display: flex;
     align-items: center;
@@ -26,11 +41,6 @@
       &:focus {
         outline: none;
       }
-    }
-
-    .icon {
-      cursor: pointer;
-      margin-left: 20px;
     }
   }
 

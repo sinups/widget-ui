@@ -75,7 +75,10 @@ const MessageInput = props => {
           placeholder={placeholder}
         />
         <div onClick={() => handleSubmit()}>
-          <Icon className={styles.icon} name="send" size={32} color="#2A65FF" />
+
+         <div className={styles.send_btn_box}>
+           <Icon className={styles.icon} name="right-arrow" size={14} color="#fff" />
+         </div>
         </div>
       </div>
       {value.length > 0 && config && <StatusBar text={barInfo.msg} error={error} percent={percent} barColor={barInfo.color} />}
