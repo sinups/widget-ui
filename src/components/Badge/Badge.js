@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './style.scss'
-import Launcher from "../Launcher";
+import Launcher from '../Launcher'
 
 /**
  * @return {null}
