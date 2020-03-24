@@ -12,15 +12,14 @@ import CheckboxField from '../CheckboxField'
 
 function Privacy(props) {
   const classes = classNames(styles.privacy_policy, props.className)
-  const [checked, setchecked] = useState(false)
-
+  const [isChecked, setIsChecked] = useState(true);
   return (
     <div className={classes}>
       {props.checkbox
         ? (
           <CheckboxField
-            checked={true}
-            // onClick={() => setState({ checked: !state.checked })}
+            checked={isChecked}
+            onClick={() => setIsChecked(!isChecked)}
             id="checkbox-privacy"
           />
 

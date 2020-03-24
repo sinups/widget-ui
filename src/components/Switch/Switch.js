@@ -12,7 +12,7 @@ const noop = () => {}
 class SwitchComponent extends React.PureComponent {
   state = {
     enabled: this.isControlledByProps() ? this.props.on : this.props.defaultOn,
-    prevPropsOn: this.props.on, // eslint-disable-line react/no-unused-state
+    prevPropsOn: this.props.on,
   };
 
   static getDerivedStateFromProps(props, state) {
