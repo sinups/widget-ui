@@ -81,26 +81,6 @@ const ArrowUp = ({ fill, size }) => (
 
 ArrowUp.propTypes = iconStandardProps
 
-const Send = ({ fill, size }) => {
-  const style = {
-    width: `${size}px`,
-    height: `${size}px`,
-    borderRadius: '50%',
-    backgroundColor: fill,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
-
-  return (
-    <div style={style}>
-      <RightArrow fill="white" size={size / 2} />
-    </div>
-  )
-}
-
-Send.propTypes = iconStandardProps
-
 const Icon = ({ name, fill, size }) => {
   switch (name) {
     case 'launcher':
@@ -117,8 +97,6 @@ const Icon = ({ name, fill, size }) => {
       return <ArrowDown fill={fill} size={size} />
     case 'arrow-up':
       return <ArrowUp fill={fill} size={size} />
-    case 'send':
-      return <Send fill={fill} size={size} />
     default:
       break
   }
