@@ -35,8 +35,8 @@ const open = () => setState({  open: !state.open });
 #### Size Launcher
 ```jsx
 <Launcher size="small" iconSize="small" pulsation></Launcher>{'  '}
-<Launcher size="regular" conSize="medium" theme="#3bbf51" pulsation></Launcher>{'  '}
-<Launcher size="large" conSize="large" theme="#3bbf51" pulsation ></Launcher>
+<Launcher size="regular" iconSize="medium" theme="#3bbf51" pulsation></Launcher>{'  '}
+<Launcher size="large" iconSize="large" theme="#3bbf51" pulsation ></Launcher>
 ```
 #### Theming Launcher
 ```jsx

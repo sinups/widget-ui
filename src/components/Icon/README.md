@@ -6,5 +6,5 @@
   <Icon name="emoji"/>
   <Icon name="arrow-down"/>
   <Icon name="arrow-up"/>
-  <Icon name="send" size={30} color={'#2A65FF'} />
+  <Icon name="send" size={30} />
 ```
