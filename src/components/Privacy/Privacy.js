@@ -14,17 +14,18 @@ function Privacy(props) {
 
   return (
     <div className={classes}>
-      {props.checkbox ?
-        <label className={styles.container}>
-          <input
-            type="checkbox"
-            defaultChecked
-            disabled
-          />
-          <span className={styles.checkmark} />
-        </label>
-        : null
-      }
+      {props.checkbox
+        ? (
+          <label className={styles.container}>
+            <input
+              type="checkbox"
+              defaultChecked
+              disabled
+            />
+            <span className={styles.checkmark} />
+          </label>
+        )
+        : null}
 
       <div className={styles.privacy_policy_text}>
         {props.children}
