@@ -21,6 +21,7 @@
       "Privacy",
       "TextAreaField",
       "RadioButton",
+      "CheckboxField",
       "Form"
     ]
   },
