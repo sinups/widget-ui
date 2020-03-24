@@ -3,27 +3,27 @@
  * @Sinups
  */
 
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.scss'
 import { privacyCondition } from './window.js'
+import CheckboxField from '../CheckboxField'
 
 function Privacy(props) {
   const classes = classNames(styles.privacy_policy, props.className)
+  const [checked, setchecked] = useState(false)
 
   return (
     <div className={classes}>
       {props.checkbox
         ? (
-          <label className={styles.container}>
-            <input
-              type="checkbox"
-              defaultChecked
-              disabled
-            />
-            <span className={styles.checkmark} />
-          </label>
+          <CheckboxField
+            checked={true}
+            // onClick={() => setState({ checked: !state.checked })}
+            id="checkbox-privacy"
+          />
+
         )
         : null}
 
