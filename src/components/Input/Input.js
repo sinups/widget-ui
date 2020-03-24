@@ -58,13 +58,21 @@ const SuccessIcon = () => (
 Input.propTypes = {
   /** Дополнительный класс */
   className: PropTypes.string,
+  /**  Лейбел инпута */
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  /** Тип инпута */
   type: PropTypes.string,
+  /** Id инпута (он же name) */
   id: PropTypes.string.isRequired,
+  /** Маска инпута, по-умолчанию выключена */
   mask: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  /** Сообщения ошибки (HTML) */
   error: PropTypes.bool,
+  /** На поле нажимали */
   touched: PropTypes.bool,
+  /** Поле активно */
   active: PropTypes.bool,
+  /** Вставка символа вместо пустого значения маски */
   maskChar: PropTypes.string,
 }
 
