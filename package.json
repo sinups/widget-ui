@@ -1,6 +1,6 @@
 {
   "name": "wgt-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules and React Styleguidist",
   "author": "sinups",
   "license": "MIT",
@@ -25,11 +25,13 @@
     "build:watch": "rollup -c -w",
     "lint": "esw --ext .jsx --ext .js --color",
     "lint:fix": "yarn lint --fix",
-    "prepare": "yarn build",
-    "prerelease": "yarn lint:fix && yarn && yarn build",
-    "release": "npm version patch && npm publish",
     "predeploy": "yarn styleguide:build",
-    "deploy": "gh-pages -d styleguide"
+    "deploy": "gh-pages -d styleguide",
+    "prerelease": "yarn lint:fix && yarn && yarn build",
+    "release": "npm publish",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -75,6 +77,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-watch": "^6.0.1",
+    "generate-changelog": "^1.8.0",
     "gh-pages": "^2.1.1",
     "gulp": "^4.0.2",
     "inquirer": "6.5.0",
