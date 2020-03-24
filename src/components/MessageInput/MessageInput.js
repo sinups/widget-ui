@@ -55,6 +55,7 @@ const MessageInput = props => {
     if (value.length) {
       if (requiredChar !== null) {
         if (value.length < requiredChar) return setError(true)
+
         return onSubmit(value)
       }
 
@@ -62,6 +63,8 @@ const MessageInput = props => {
     }
     setError(true)
   }
+
+  const insertEmoji = () => console.log('Smile')
 
   return (
     <div className={classes}>
@@ -74,8 +77,13 @@ const MessageInput = props => {
           placeholder={placeholder}
         />
 
-        <div onClick={() => handleSubmit()} className={styles.btn_group_container}>
-          <div className={styles.send_btn_box}>
+        <div className={styles.btn_group_container}>
+
+          <div onClick={() => insertEmoji()} className={styles.emoji_btn_box}>
+            <Icon className={styles.icon} name="emoji" size={21} color="#909090" />
+          </div>
+
+          <div onClick={() => handleSubmit()} className={styles.send_btn_box}>
             <Icon className={styles.icon} name="right-arrow" size={14} color="#fff" />
           </div>
         </div>
